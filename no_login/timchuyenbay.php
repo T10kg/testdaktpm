@@ -1,4 +1,3 @@
-git add h
 <?php
 require("../conn.php");
 require("../client/func.php");
