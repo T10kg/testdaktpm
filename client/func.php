@@ -11,5 +11,9 @@
         $sql="SELECT * FROM airport ";
         return mysqli_query($conn, $sql);
     }
+    function ticket($conn, $sql){
+        $result=mysqli_query ($conn, $sql);
+        return $result;
+    }
     
     ?>

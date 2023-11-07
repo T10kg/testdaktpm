@@ -48,12 +48,16 @@ $cityy = cityname($conn);
 
             while ($row = $flights->fetch_assoc()) {
                 echo "Mã chuyến bay: " . $row["FLIGHT_CODE"] . "<br>";
-                echo "Ngày khởi hành: " . $row["DEPARTURE"] . "<br>";
+                echo "Giờ khởi hành: " . $row["DEPARTURE"] . "<br>";
+                $ngay_dat_ve = date("Y-m-d");
+                echo $ngay_dat_ve;
                 // ... in ra các thông tin khác của chuyến bay
                 echo '<form method="post" action="loaive.php">'; // Chỉ định URL của trang đặt vé ở đây
-                echo '<input type="hidden" name="flight_code" value="' . $row["FLIGHT_CODE"] . '">'; // Truyền mã chuyến bay vào trường ẩn
+                echo '<input  name="flight_code" for="flight_code" value="' . $row["FLIGHT_CODE"] . '">';
                 echo '<input type="submit" value="Đặt vé" name="book">';
                 echo '</form>';
+                $flight_code=$_POST['flight_code'];
+                $_SESSION['flight_code']=$flight_code;
             }
         } else {
             echo "Không tìm thấy chuyến bay từ $from đến $arrive.";

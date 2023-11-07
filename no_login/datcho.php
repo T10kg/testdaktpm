@@ -8,6 +8,7 @@
         <label>Địa chỉ:</label><input type="text" name="address">
         <label>Tuổi:</label><input type="text" name="age">
         <label>giới tính:</label><input type="text" name="sex">
+        
         <input type="submit" value="Lưu thông tin" name="submit">
     </form>
 <?php
