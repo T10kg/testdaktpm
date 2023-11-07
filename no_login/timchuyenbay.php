@@ -1,17 +1,10 @@
-<<<<<<< Updated upstream
-git add cc
-=======
->>>>>>> Stashed changes
+git add
 <?php
 require("../conn.php");
 require("../client/func.php");
 $city = cityname($conn);
 $cityy = cityname($conn); 
 ?>
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
 <form method="post">
     <label>Tìm chuyến bay:</label><br><br>
     <label>Điểm đi:</label>
