@@ -1,14 +1,11 @@
-<<<<<<< HEAD
 
-=======
 <?php
 require("../conn.php");
 require("../client/func.php");
 $city = cityname($conn);
 $cityy = cityname($conn); 
 ?>
->>>>>>> 2027bf2e4690a1967b209ba9c742bd70b36a4642
-git add
+
 <form method="post">
     <label>Tìm chuyến bay:</label><br><br>
     <label>Điểm đi:</label>
