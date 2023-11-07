@@ -1,9 +1,4 @@
-<?php
-require("../conn.php");
-require("../client/func.php");
-$city = cityname($conn);
-$cityy = cityname($conn); 
-?>
+
 
 <form method="post">
     <label>Tìm chuyến bay:</label><br><br>
