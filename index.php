@@ -9,11 +9,12 @@ require("client/func.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/client.css" />
 </head>
 <body>
-    <div>
-        <div class="sp">
-            <ul ><i class="fa-solid fa-bars-staggered"></i>
+    <div class="menuu">
+        <div class="chucnang"><i class="fa-solid fa-bars-staggered"> <a href="index.php">wearefly</a></i>
+            <ul class="dropdown-menu">
                 <a href="index.php"><li>Trang chủ</li></a>
                 <a href="datcho.php"><li>Đặt chỗ của tôi</li></a>
                 <a href="themn.php"><li>Hộp thư của tôi</li></a>
@@ -24,12 +25,12 @@ require("client/func.php");
                 
             </ul>
         </div>
-        <div><h3>wearefly</h3></div>
+        <div class="menu">
         <div class="sp">
                 <a href="no_login/colab.php">Hợp tác với chúng tôi </a>
         </div>
         <div class="sp">
-                <a href="dssp.php">Tìm chuyến bay </a>
+                <a href="no_login/timchuyenbay.php">Tìm chuyến bay </a>
         </div>
         <div class="sp">
                 <a href="dssp.php">Đặt chỗ của tôi</a>
@@ -40,6 +41,7 @@ require("client/func.php");
         <div class="sp">
                 <a href="client/register.php">Đăng kí</a>
         </div>
-    <div>
+        </div>
+</div>
 </body>
 </html>

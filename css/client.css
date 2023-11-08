@@ -1,0 +1,67 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: middle;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+.menuu {
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f2f2f2;
+    padding: 10px;
+    width: 1200px;
+}
+
+.chucnang {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    opacity: 0; /* Ẩn dropdown menu mặc định */
+    visibility: hidden;
+    list-style: none;
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Thêm hiệu ứng transition */
+}
+
+.dropdown-menu li {
+    margin-bottom: 10px;
+}
+
+.dropdown-menu a {
+    text-decoration: none;
+    color: #333;
+}
+
+.chucnang:hover .dropdown-menu {
+    opacity: 1; /* Hiển thị dropdown menu khi di chuột vào */
+    visibility: visible;
+}
+
+.menu {
+    display: flex;
+}
+
+.sp {
+    position: relative;
+    margin-left: 10px;
+}
+
+.sp a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Additional styling for the dropdown icon */
+.fa-bars-staggered {
+    cursor: pointer;
+}
