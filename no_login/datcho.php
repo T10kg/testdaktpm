@@ -15,7 +15,9 @@ require("../conn.php");
 require("../client/func.php");
 session_start();
 if (isset($_POST['submit'])){
-        $passport=$_POST["passport"];
+    $found = 0;
+    $passport=$_POST["passport"];
+    if(!mysqli_num_rows(checkthongtin($conn, $passport))){
         $ho=$_POST["ho"];
         $tenlot=$_POST["tenlot"];
         $ten=$_POST["ten"];
@@ -25,10 +27,11 @@ if (isset($_POST['submit'])){
         $diachi=$_POST["address"]; 
         $SĐTBigInt = (int)$SĐT;
         $tuoiInt = (int)$tuoi;
-        $r=passport($conn);
         $sql="INSERT INTO passenger_infor (`PASSPORTNO`, `FNAME`, `MNAME`, `LNAME`, `ADDRESS`, `PHONE`, `AGE`, `SEX`,`USERNAME`) VALUES('$passport', '$ho', ' $tenlot', '$ten','$diachi','$SĐTBigInt','$tuoiInt', '$gioitinh','NULL')";
         $result=mysqli_query ($conn, $sql);
-        if ($result==1) {
+        $found = 1;
+    }
+    if ($result==1 || $found == 0) {
             $_SESSION['passport']=$passport;
             header("Location: loaive.php"); // Điều hướng đến trang admin.php
             exit(); // Dừng thực thi mã sau khi điều hướng

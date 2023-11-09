@@ -15,8 +15,9 @@
         $result=mysqli_query ($conn, $sql);
         return $result;
     }
-    function passport($conn){
-        $sql="INSERT INTO `passenger_ticket`(`PID`, `PASSPORTNO`) VALUES ('8','A13578') ";
+
+    function checkthongtin($conn, $PASSPORTNO){
+        $sql = "SELECT * FROM passenger_infor WHERE 'PASSPORTNO' = '$PASSPORTNO'";
         return mysqli_query($conn, $sql);
     }
     ?>
