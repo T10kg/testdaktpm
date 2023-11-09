@@ -16,7 +16,8 @@ if (isset($_POST['submit'])) {
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
         $hashedPassword = $row['PASS']; // Lấy hashed password từ cơ sở dữ liệu
-        if (password_verify($password, $hashedPassword)) {
+
+        if ($hashedPassword == md5($password)) {
             // Đăng nhập thành công
             session_start();
             $_SESSION['username'] = $username;

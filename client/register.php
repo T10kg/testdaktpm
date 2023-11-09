@@ -23,8 +23,7 @@ if (isset($_POST['submitt'])) {
         echo "Tài khoản đã tồn tại.";
     } else {
         // Băm mật khẩu
-        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-
+        $hashedPassword = md5($password);
         // Thêm tài khoản vào cơ sở dữ liệu
         $sql = "INSERT INTO passenger_login (`USERNAME`, `PASS`) VALUES ('$username', '$hashedPassword')";
         $result=mysqli_query ($conn, $sql);
