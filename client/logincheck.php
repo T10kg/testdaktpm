@@ -6,19 +6,16 @@ if (isset($_POST['submit'])) {
     $username = $_POST["username"];
     $password = $_POST["password"];
     
-
     // Kiểm tra xem tài khoản có tồn tại hay không
     $sql = "SELECT * FROM passenger_login WHERE USERNAME = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("s", $username);
     $stmt->execute();
     $result = $stmt->get_result();
-    $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
-        $hashedPassword = $row['PASS'];
-
+        $hashedPassword = $row['PASS']; // Lấy hashed password từ cơ sở dữ liệu
         if (password_verify($password, $hashedPassword)) {
             // Đăng nhập thành công
             session_start();
@@ -39,5 +36,3 @@ if (isset($_POST['submit'])) {
     }
 }
 ?>
-
-
