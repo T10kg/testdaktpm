@@ -79,11 +79,10 @@ session_start();
             while ($row = $flights->fetch_assoc()) {
                 echo "Mã chuyến bay: " . $row["FLIGHT_CODE"] . "<br>";
                 echo "Giờ khởi hành: " . $row["DEPARTURE"] . "<br>";
-                $ngay_dat_ve = date("Y-m-d");
-
-                echo $ngay_dat_ve;
+                echo '<input type="hidden" name="date" value="' . $ngay_dat_ve = date("Y-m-d") . '">';
+                $_SESSION['date']=$ngay_dat_ve = date("Y-m-d") ;
                 // ... in ra các thông tin khác của chuyến bay
-                echo '<form method="post" action="loaive.php">'; // Chỉ định URL của trang đặt vé ở đây
+                echo '<form method="post" action="datcho.php">'; // Chỉ định URL của trang đặt vé ở đây
                 echo '<input type="hidden" name="flight_code" value="' . $row["FLIGHT_CODE"] . '">';
                 $_SESSION['flight_code']=$row["FLIGHT_CODE"] ;
                 echo $_SESSION['flight_code'];

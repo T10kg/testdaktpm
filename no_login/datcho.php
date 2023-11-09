@@ -8,13 +8,12 @@
         <label>Địa chỉ:</label><input type="text" name="address">
         <label>Tuổi:</label><input type="text" name="age">
         <label>giới tính:</label><input type="text" name="sex">
-        
-        <input type="submit" value="Lưu thông tin" name="submit">
+        <input type="submit" value="Tiếp tục" name="submit">
     </form>
 <?php
 require("../conn.php");
 require("../client/func.php");
-
+session_start();
 if (isset($_POST['submit'])){
         $passport=$_POST["passport"];
         $ho=$_POST["ho"];
@@ -26,11 +25,11 @@ if (isset($_POST['submit'])){
         $diachi=$_POST["address"]; 
         $SĐTBigInt = (int)$SĐT;
         $tuoiInt = (int)$tuoi;
-        $sql="INSERT INTO ticket (`CLASS`) VALUES('$class')";
-        $sql="INSERT INTO passenger_infor (`PASSPORTNO`, `FNAME`, `MNAME`, `LNAME`, `ADDRESS`, `PHONE`, `AGE`, `SEX`) VALUES('$passport', '$ho', ' $tenlot', '$ten','$diachi','$SĐTBigInt','$tuoiInt', '$gioitinh')";
+        $sql="INSERT INTO passenger_infor (`PASSPORTNO`, `FNAME`, `MNAME`, `LNAME`, `ADDRESS`, `PHONE`, `AGE`, `SEX`,`USERNAME`) VALUES('$passport', '$ho', ' $tenlot', '$ten','$diachi','$SĐTBigInt','$tuoiInt', '$gioitinh','NULL')";
         $result=mysqli_query ($conn, $sql);
         if ($result==1) {
-            header("Location: ../index.php"); // Điều hướng đến trang admin.php
+            $_SESSION['passport']=$passport;
+            header("Location: loaive.php"); // Điều hướng đến trang admin.php
             exit(); // Dừng thực thi mã sau khi điều hướng
         } 
     }
