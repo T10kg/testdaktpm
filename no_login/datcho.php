@@ -25,6 +25,7 @@ if (isset($_POST['submit'])){
         $diachi=$_POST["address"]; 
         $SĐTBigInt = (int)$SĐT;
         $tuoiInt = (int)$tuoi;
+        $r=passport($conn);
         $sql="INSERT INTO passenger_infor (`PASSPORTNO`, `FNAME`, `MNAME`, `LNAME`, `ADDRESS`, `PHONE`, `AGE`, `SEX`,`USERNAME`) VALUES('$passport', '$ho', ' $tenlot', '$ten','$diachi','$SĐTBigInt','$tuoiInt', '$gioitinh','NULL')";
         $result=mysqli_query ($conn, $sql);
         if ($result==1) {

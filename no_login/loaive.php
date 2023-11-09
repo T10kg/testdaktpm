@@ -22,7 +22,7 @@ if (isset($_POST['submit'])) {
     $departure_date = $_POST['departure_date'];
     $ticket_code =rand(100000000, 999999999); // Tạo mã vé ngẫu nhiên
     $codeInt = (int)$ticket_code;
-    $ticket_sql = "INSERT INTO ticket (`TICKET_NUMBER`, `DATE_OF_BOOKING`, `DATE_OF_TRAVEL`, `CLASS`, `DATE_OF_CANCELLATION`, `PID`, `PASSPORTNO`,`FLIGHT_CODE`) VALUES ('$codeInt','" .  $_SESSION['date'] . "','$departure_date', '$class','NULL',1,'8216127','" . $_SESSION['flight_code'] . "')";
+    $ticket_sql = "INSERT INTO ticket (`TICKET_NUMBER`, `DATE_OF_BOOKING`, `DATE_OF_TRAVEL`, `CLASS`, `DATE_OF_CANCELLATION`, `PID`, `PASSPORTNO`,`FLIGHT_CODE`) VALUES ('$codeInt','" .  $_SESSION['date'] . "','$departure_date', '$class','NULL',1,'" . $_SESSION['passport'] . "','" . $_SESSION['flight_code'] . "')";
     $ticket_result = mysqli_query($conn, $ticket_sql);
     if ($ticket_result == 1) {
         echo "Thêm vé thành công! Mã vé: " . $ticket_code;
