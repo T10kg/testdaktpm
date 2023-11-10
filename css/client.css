@@ -15,12 +15,19 @@ body {
     padding: 10px;
     width: 1200px;
 }
+.banner{
+    background-image: url('../img/milky-way-starry-sky-night-sky-star-956981.jpeg');   
+    position: relative;
+    width: 1200px;
+    height: 200px;
+}
 
 .chucnang {
     position: relative;
 }
 
 .dropdown-menu {
+
     position: absolute;
     top: 100%;
     left: 0;
@@ -35,9 +42,11 @@ body {
 
 .dropdown-menu li {
     margin-bottom: 10px;
+    width: 200px;
 }
 
 .dropdown-menu a {
+    width: 200px;
     text-decoration: none;
     color: #333;
 }

@@ -7,7 +7,7 @@ if (!isset($_SESSION['username'])) {
     exit();
 }
 
-$user = $_SESSION['username'];
+$username = $_SESSION['username'];
 
 // Khi người dùng nhấp vào nút "Thoát"
 if (isset($_POST['logout'])) {
