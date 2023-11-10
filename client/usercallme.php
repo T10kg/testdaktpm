@@ -7,7 +7,7 @@ if (!isset($_SESSION['username'])) {
     exit();
 }
 
-$username = $_SESSION['username'];
+$user = $_SESSION['username'];
 
 // Khi người dùng nhấp vào nút "Thoát"
 if (isset($_POST['logout'])) {
@@ -35,17 +35,17 @@ if (isset($_POST['logout'])) {
         </div>
     <div class="menu">
         <div class="sp">
-                <a href="colab.php">Hợp tác với chúng tôi </a>
+                <a href="usercolab.php">Hợp tác với chúng tôi </a>
         </div>
         <div class="sp">
-                <a href="timchuyenbay.php">Tìm chuyến bay </a>
+                <a href="usertimchuyenbay.php">Tìm chuyến bay </a>
         </div>
         <div class="sp">
-                <a href="datcho.php">Đặt chỗ của tôi</a>
+                <a href="userchocuatoi.php">Đặt chỗ của tôi</a>
         </div>
         <div class="sp">
             <form class="form" method="post" action="">
-            <p>Xin chào: <?php echo $username; ?> <input type="submit" name="logout" value="Thoát"></p>
+            <p>Xin chào: <?php echo $user; ?> <input type="submit" name="logout" value="Thoát"></p>
             </form>
         </div> 
     </div>
@@ -56,7 +56,7 @@ if (isset($_POST['logout'])) {
         <input type="text" id="email" name="email" required><br><br>
         <label for="gopy">Ý kiến đóng góp:</label>
         <input type="text" id="gopy" name="gopy" required><br><br>
-        <input type="submit" value="Gửi góp ý" name="gopy">
+        <input type="submit" value="Gửi góp ý" name="phanhoi">
     </form>
 </div> 
 </body>
@@ -66,14 +66,13 @@ if (isset($_POST['logout'])) {
 require("../conn.php");
 require("func.php");
 
-if (isset($_POST['gopy'])) {
+if (isset($_POST['phanhoi'])) {
     $email = $_POST["email"];
     $gopy = $_POST["gopy"];
-    $sql="INSERT INTO `support`(`EMAIL`, `TEXT`) VALUES ('$email','$gopy')";
+    $sql="INSERT INTO `support`(`EMAIL`, `TEXT`,`USERNAME`) VALUES ('$email','$gopy','$user')";
     $result=mysqli_query ($conn, $sql);
     if ($result==1) {
-        header("Location: usersms.php"); // Điều hướng đến trang admin.php
-        exit(); // Dừng thực thi mã sau khi điều hướng
+        header("Location: usercallme.php");
     } 
 }
 

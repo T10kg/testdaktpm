@@ -7,7 +7,7 @@ if (!isset($_SESSION['username'])) {
     exit();
 }
 
-$username = $_SESSION['username'];
+$user = $_SESSION['username'];
 
 // Khi người dùng nhấp vào nút "Thoát"
 if (isset($_POST['logout'])) {
@@ -35,13 +35,13 @@ if (isset($_POST['logout'])) {
         </div>
     <div class="menu">
         <div class="sp">
-                <a href="colab.php">Hợp tác với chúng tôi </a>
+                <a href="usercolab.php">Hợp tác với chúng tôi </a>
         </div>
         <div class="sp">
-                <a href="timchuyenbay.php">Tìm chuyến bay </a>
+                <a href="usertimchuyenbay.php">Tìm chuyến bay </a>
         </div>
         <div class="sp">
-                <a href="datcho.php">Đặt chỗ của tôi</a>
+                <a href="userchocuatoi.php">Đặt chỗ của tôi</a>
         </div>
         <div class="sp">
             <form class="form" method="post" action="">

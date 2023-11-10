@@ -35,13 +35,13 @@ if (isset($_POST['logout'])) {
         </div>
     <div class="menu">
         <div class="sp">
-                <a href="colab.php">Hợp tác với chúng tôi </a>
+                <a href="usercolab.php">Hợp tác với chúng tôi </a>
         </div>
         <div class="sp">
-                <a href="timchuyenbay.php">Tìm chuyến bay </a>
+                <a href="usertimchuyenbay.php">Tìm chuyến bay </a>
         </div>
         <div class="sp">
-                <a href="datcho.php">Đặt chỗ của tôi</a>
+                <a href="userchocuatoi.php">Đặt chỗ của tôi</a>
         </div>
         <div class="sp">
             <form class="form" method="post" action="">
@@ -73,7 +73,7 @@ if (isset($_POST['submit'])) {
     $result=mysqli_query ($conn, $sql);
     if ($result==1) {
         header("Location: usersms.php"); // Điều hướng đến trang admin.php
-        exit(); // Dừng thực thi mã sau khi điều hướng
+        // Dừng thực thi mã sau khi điều hướng
     } 
 }
 
