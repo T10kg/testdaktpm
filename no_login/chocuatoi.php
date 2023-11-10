@@ -6,7 +6,7 @@
 <div class="menuu">
         <div class="chucnang"><i class="fa-solid fa-bars-staggered"> <a href="index.php">wearefly</a></i>
             <ul class="dropdown-menu">
-                <a href="userlogin.php"><li>Trang chủ</li></a>
+                <a href="../index.php"><li>Trang chủ</li></a>
                 <a href="datcho.php"><li>Đặt chỗ của tôi</li></a>
                 <a href="sms.php"><li>Hộp thư của tôi</li></a>
                 <a href="timchuyenbay.php"><li>Tìm chuyến bay</li></a>
@@ -25,7 +25,7 @@
         <div class="sp">
                 <a href="datcho.php">Đặt chỗ của tôi</a>
         </div>
-        <div class="sp">
+         <div class="sp">
                 <a href="client/login.php">Đăng nhập</a>
         </div>
         <div class="sp">
