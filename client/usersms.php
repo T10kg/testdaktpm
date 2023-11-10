@@ -3,7 +3,7 @@ session_start();
 
 // Kiểm tra xem người dùng đã đăng nhập hay chưa
 if (!isset($_SESSION['username'])) {
-    header("Location: login.php"); // Điều hướng về trang đăng nhập nếu chưa đăng nhập
+    header("Location:login.php"); // Điều hướng về trang đăng nhập nếu chưa đăng nhập
     exit();
 }
 
@@ -49,39 +49,32 @@ if (isset($_POST['logout'])) {
             </form>
         </div> 
     </div>
-</div>
+</div>  
+<div>
+<form method="post" action="logincheck.php">
+        <label for="email">Email liên hệ:</label>
+        <input type="text" id="email" name="email" required><br><br>
+        <label for="gopy">Ý kiến đóng góp:</label>
+        <input type="text" id="gopy" name="gopy" required><br><br>
+        <input type="submit" value="Gửi góp ý" name="submit">
+    </form>
+</div> 
 </body>
 <html>
-<div>
-    <form method="post">
-    <label>Loại vé:</label>
-    <select name="class">
-            <option value="ECONOMY">ECONOMY</option>
-            <option value="BUSINESS">BUSINESS</option>
-            <option value="FIRST-CLASS">FIRST-CLASS</option>
-        </select>
-    <label>Ngày khởi hành:</label><input type="date" name="departure_date">
-        <input type="submit" value="Đặt vé" name="submit">
-    </form>
-</div>
 
 <?php
 require("../conn.php");
-require("../client/func.php");
+require("func.php");
 
 if (isset($_POST['submit'])) {
-    session_start();
-    echo $_SESSION['flight_code'];
-    $class = $_POST["class"];
-    $departure_date = $_POST['departure_date'];
-    $ticket_code =rand(100000000, 999999999); // Tạo mã vé ngẫu nhiên
-    $codeInt = (int)$ticket_code;
-    $ticket_sql = "INSERT INTO ticket (`TICKET_NUMBER`, `DATE_OF_BOOKING`, `DATE_OF_TRAVEL`, `CLASS`, `DATE_OF_CANCELLATION`, `PASSPORTNO`,`FLIGHT_CODE`) VALUES ('$codeInt','" .  $_SESSION['date'] . "','$departure_date', '$class','NULL','" . $_SESSION['passport'] . "','" . $_SESSION['flight_code'] . "')";
-    $ticket_result = mysqli_query($conn, $ticket_sql);
-    if ($ticket_result == 1) {
-        echo "Thêm vé thành công! Mã vé: " . $ticket_code;
-    } else {
-        echo "Lỗi khi thêm vé: " . mysqli_error($conn);
-    }
+    $email = $_POST["email"];
+    $gopy = $_POST["gopy"];
+    $sql="INSERT INTO `support`(`EMAIL`, `TEXT`) VALUES ('$email','$gopy')";
+    $result=mysqli_query ($conn, $sql);
+    if ($result==1) {
+        header("Location: usersms.php"); // Điều hướng đến trang admin.php
+        exit(); // Dừng thực thi mã sau khi điều hướng
+    } 
 }
+
 ?>

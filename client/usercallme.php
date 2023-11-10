@@ -22,7 +22,7 @@ if (isset($_POST['logout'])) {
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="stylesheet" href="../css/client.css" />
 <div class="menuu">
-        <div class="chucnang"><i class="fa-solid fa-bars-staggered"> <a href="index.php">wearefly</a></i>
+        <div class="chucnang"><i class="fa-solid fa-bars-staggered"> <a href="userlogin.php">wearefly</a></i>
             <ul class="dropdown-menu">
             <a href="userlogin.php"><li>Trang chủ</li></a>
                 <a href="userchocuatoi.php"><li>Đặt chỗ của tôi</li></a>
@@ -49,7 +49,32 @@ if (isset($_POST['logout'])) {
             </form>
         </div> 
     </div>
-</div>
+</div>  
+<div>
+<form method="post">
+        <label for="email">Email liên hệ:</label>
+        <input type="text" id="email" name="email" required><br><br>
+        <label for="gopy">Ý kiến đóng góp:</label>
+        <input type="text" id="gopy" name="gopy" required><br><br>
+        <input type="submit" value="Gửi góp ý" name="gopy">
+    </form>
+</div> 
 </body>
 <html>
 
+<?php
+require("../conn.php");
+require("func.php");
+
+if (isset($_POST['gopy'])) {
+    $email = $_POST["email"];
+    $gopy = $_POST["gopy"];
+    $sql="INSERT INTO `support`(`EMAIL`, `TEXT`) VALUES ('$email','$gopy')";
+    $result=mysqli_query ($conn, $sql);
+    if ($result==1) {
+        header("Location: usersms.php"); // Điều hướng đến trang admin.php
+        exit(); // Dừng thực thi mã sau khi điều hướng
+    } 
+}
+
+?>
