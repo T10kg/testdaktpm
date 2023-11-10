@@ -3,7 +3,7 @@ session_start();
 
 // Kiểm tra xem người dùng đã đăng nhập hay chưa
 if (!isset($_SESSION['username'])) {
-    header("Location: login.php"); // Điều hướng về trang đăng nhập nếu chưa đăng nhập
+    header("Location:login.php"); // Điều hướng về trang đăng nhập nếu chưa đăng nhập
     exit();
 }
 
@@ -24,7 +24,7 @@ if (isset($_POST['logout'])) {
 <div class="menuu">
         <div class="chucnang"><i class="fa-solid fa-bars-staggered"> <a href="index.php">wearefly</a></i>
             <ul class="dropdown-menu">
-                <a href="userlogin.php"><li>Trang chủ</li></a>
+            <a href="userlogin.php"><li>Trang chủ</li></a>
                 <a href="userchocuatoi.php"><li>Đặt chỗ của tôi</li></a>
                 <a href="usersms.php"><li>Hộp thư của tôi</li></a>
                 <a href="usertimchuyenbay.php"><li>Tìm chuyến bay</li></a>
@@ -35,13 +35,13 @@ if (isset($_POST['logout'])) {
         </div>
     <div class="menu">
         <div class="sp">
-                <a href="../no_login/colab.php">Hợp tác với chúng tôi </a>
+                <a href="colab.php">Hợp tác với chúng tôi </a>
         </div>
         <div class="sp">
-                <a href="../no_login/timchuyenbay.php">Tìm chuyến bay </a>
+                <a href="timchuyenbay.php">Tìm chuyến bay </a>
         </div>
         <div class="sp">
-                <a href="../no_login/chocuatoi.php">Đặt chỗ của tôi</a>
+                <a href="datcho.php">Đặt chỗ của tôi</a>
         </div>
         <div class="sp">
             <form class="form" method="post" action="">

@@ -24,7 +24,7 @@ if (isset($_POST['logout'])) {
 <div class="menuu">
         <div class="chucnang"><i class="fa-solid fa-bars-staggered"> <a href="index.php">wearefly</a></i>
             <ul class="dropdown-menu">
-                <a href="userlogin.php"><li>Trang chủ</li></a>
+            <a href="userlogin.php"><li>Trang chủ</li></a>
                 <a href="userchocuatoi.php"><li>Đặt chỗ của tôi</li></a>
                 <a href="usersms.php"><li>Hộp thư của tôi</li></a>
                 <a href="usertimchuyenbay.php"><li>Tìm chuyến bay</li></a>
@@ -35,13 +35,13 @@ if (isset($_POST['logout'])) {
         </div>
     <div class="menu">
         <div class="sp">
-                <a href="../no_login/colab.php">Hợp tác với chúng tôi </a>
+                <a href="colab.php">Hợp tác với chúng tôi </a>
         </div>
         <div class="sp">
-                <a href="../no_login/timchuyenbay.php">Tìm chuyến bay </a>
+                <a href="timchuyenbay.php">Tìm chuyến bay </a>
         </div>
         <div class="sp">
-                <a href="../no_login/chocuatoi.php">Đặt chỗ của tôi</a>
+                <a href="datcho.php">Đặt chỗ của tôi</a>
         </div>
         <div class="sp">
             <form class="form" method="post" action="">
@@ -52,4 +52,41 @@ if (isset($_POST['logout'])) {
 </div>
 </body>
 <html>
+<h2>Tìm kiếm thông tin chuyến bay</h2>
+<form method="post">
+    <label for="searchTerm"> số hộ chiếu:</label>
+    <input type="text" id="searchTerm" name="searchTerm" required><br><br>
+    <input type="submit" value="Tìm kiếm" name="submit">
+</form>
+<?php
+require("../conn.php");
+require("func.php");
+
+if (isset($_POST['submit'])) {
+    $searchTerm = $_POST["searchTerm"];
+
+    // Kiểm tra xem người dùng đã nhập mã vẽ hay số hộ chiếu (passport)
+    // và tìm kiếm thông tin chuyến bay tương ứng
+    $sql = "SELECT * FROM ticket WHERE  PASSPORTNO = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("s", $searchTerm);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    if ($result->num_rows > 0) {
+        // Hiển thị thông tin chuyến bay
+        while ($row = $result->fetch_assoc()) {
+            echo "ngày mua: " . $row["DATE_OF_BOOKING"] . "<br>";
+            echo "ngày đi: " . $row["DATE_OF_TRAVEL"] . "<br>";
+            echo "Hạng: " . $row["CLASS"] . "<br>";
+            echo "Ngày hủy: " . $row["DATE_OF_CANCELLATION"] . "<br>";
+            echo "Mã chuyến bay: " . $row["FLIGHT_CODE"] . "<br><br>";
+            echo "Mã vé:" . $row["TICKET_NUMBER"] . "<br><br>";
+            exit();
+        }
+    } else {
+        echo "Không tìm thấy thông tin chuyến bay.";
+    }
+}
+?>
 

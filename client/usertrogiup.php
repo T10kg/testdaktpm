@@ -3,7 +3,7 @@ session_start();
 
 // Kiểm tra xem người dùng đã đăng nhập hay chưa
 if (!isset($_SESSION['username'])) {
-    header("Location: login.php"); // Điều hướng về trang đăng nhập nếu chưa đăng nhập
+    header("Location:login.php"); // Điều hướng về trang đăng nhập nếu chưa đăng nhập
     exit();
 }
 
@@ -24,7 +24,7 @@ if (isset($_POST['logout'])) {
 <div class="menuu">
         <div class="chucnang"><i class="fa-solid fa-bars-staggered"> <a href="index.php">wearefly</a></i>
             <ul class="dropdown-menu">
-                <a href="userlogin.php"><li>Trang chủ</li></a>
+            <a href="userlogin.php"><li>Trang chủ</li></a>
                 <a href="userchocuatoi.php"><li>Đặt chỗ của tôi</li></a>
                 <a href="usersms.php"><li>Hộp thư của tôi</li></a>
                 <a href="usertimchuyenbay.php"><li>Tìm chuyến bay</li></a>
@@ -35,13 +35,13 @@ if (isset($_POST['logout'])) {
         </div>
     <div class="menu">
         <div class="sp">
-                <a href="../no_login/colab.php">Hợp tác với chúng tôi </a>
+                <a href="colab.php">Hợp tác với chúng tôi </a>
         </div>
         <div class="sp">
-                <a href="../no_login/timchuyenbay.php">Tìm chuyến bay </a>
+                <a href="timchuyenbay.php">Tìm chuyến bay </a>
         </div>
         <div class="sp">
-                <a href="../no_login/chocuatoi.php">Đặt chỗ của tôi</a>
+                <a href="datcho.php">Đặt chỗ của tôi</a>
         </div>
         <div class="sp">
             <form class="form" method="post" action="">
@@ -52,4 +52,14 @@ if (isset($_POST['logout'])) {
 </div>
 </body>
 <html>
-
+<div class="help">
+    <div><a href="usernew1.php">Hãng hàng không Bamboo Airways đổi lịch chuyến bay của tôi</a></div>
+    <div><a href="usernew2.php">Cách đổi lịch vé máy bay của tôi </a></div>
+    <div><a href="usernew3.php">Cách huỷ vé và hoàn tiền cho đặt chỗ máy bay </a></div>
+    <div><a href="usernew4.php">Cách sửa hoặc đổi tên hành khách bay</a></div>
+    <div><a href="usernew5.php">Cách làm thủ tục trực tuyến</a></div>
+    <div><a href="usernew6.php">Cách yêu cầu xuất hóa đơn GTGT khi đặt vé máy bay tại Việt Nam </a></div>
+    <div><a href="usernew7.php">Xác nhận và xác thực thanh toán </a></div>
+    <div><a href="usernew8.php">Làm cách nào để kiểm tra trạng thái hoàn tiền của tôi</a></div>
+    <div><a href="usernew9.php">Lời hứa hoàn lại tiền trên Traveloka </a></div>
+</div>
