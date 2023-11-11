@@ -12,6 +12,7 @@
                 <a href="timchuyenbay.php"><li>Tìm chuyến bay</li></a>
                 <a href="callme.php"><li>Liên hệ chúng tôi</li></a>
                 <a href="colab.php"><li>Hợp tác chúng tôi</li></a>
+                <a href="cachdatve.php"><li>Cách đặt vé</li></a>
                 <a href="trogiup.php"><li> Trợ giúp</li></a>
             </ul>
         </div>
@@ -36,5 +37,8 @@
 <div>
         Vui lòng đăng nhập
 </div>
+<div class="sp">
+                     <button><a href="../client/login.php">Đăng nhập</a></button>
+                </div>
 </body>
 <html>

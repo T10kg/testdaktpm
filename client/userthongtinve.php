@@ -7,7 +7,7 @@ if (!isset($_SESSION['username'])) {
     exit();
 }
 
-$user = $_SESSION['username'];
+$username = $_SESSION['username'];
 
 // Khi người dùng nhấp vào nút "Thoát"
 if (isset($_POST['logout'])) {
@@ -46,35 +46,33 @@ if (isset($_POST['logout'])) {
         </div>
         <div class="sp">
             <form class="form" method="post" action="">
-            <p>Xin chào: <?php echo $user; ?> <input type="submit" name="logout" value="Thoát"></p>
+            <p>Xin chào: <?php echo $username; ?> <input type="submit" name="logout" value="Thoát"></p>
             </form>
         </div> 
     </div>
-</div>  
-<div>
-<form method="post">
-        <label for="email">Email liên hệ:</label>
-        <input type="text" id="email" name="email" required><br><br>
-        <label for="gopy">Ý kiến đóng góp:</label>
-        <input type="text" id="gopy" name="gopy" required><br><br>
-        <input type="submit" value="Gửi góp ý" name="phanhoi">
-    </form>
-</div> 
+</div>
 </body>
-<html>
-
+</html>
 <?php
 require("../conn.php");
-require("func.php");
+require("../client/func.php");
 
-if (isset($_POST['phanhoi'])) {
-    $email = $_POST["email"];
-    $gopy = $_POST["gopy"];
-    $sql="INSERT INTO `support`(`EMAIL`, `TEXT`,`USERNAME`) VALUES ('$email','$gopy','$user')";
-    $result=mysqli_query ($conn, $sql);
-    if ($result==1) {
-        header("Location: usercallme.php");
-    } 
+$sql = "SELECT * FROM ticket WHERE PASSPORTNO = '{$_SESSION['passport']}'";
+$result = mysqli_query($conn, $sql);
+
+// Kiểm tra xem có bản ghi nào được trả về hay không
+if (mysqli_num_rows($result) > 0) {
+    // Duyệt qua từng bản ghi và hiển thị thông tin
+    while ($row = mysqli_fetch_assoc($result)) {
+        echo "ngày mua: " . $row["DATE_OF_BOOKING"] . "<br>";
+        echo "ngày đi: " . $row["DATE_OF_TRAVEL"] . "<br>";
+        echo "Hạng: " . $row["CLASS"] . "<br>";
+        echo "Ngày hủy: " . $row["DATE_OF_CANCELLATION"] . "<br>";
+        echo "Mã chuyến bay: " . $row["FLIGHT_CODE"] . "<br>";
+        echo "Mã vé:" . $row["TICKET_NUMBER"] . "<br><br>";
+    }
+} else {
+    echo "Không có góp ý nào.";
 }
-
 ?>
+</div>

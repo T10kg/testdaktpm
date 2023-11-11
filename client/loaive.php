@@ -30,6 +30,7 @@ if (isset($_POST['logout'])) {
                 <a href="usertimchuyenbay.php"><li>Tìm chuyến bay</li></a>
                 <a href="usercallme.php"><li>Liên hệ chúng tôi</li></a>
                 <a href="usercolab.php"><li>Hợp tác chúng tôi</li></a>
+                <a href="usercachdatve.php"><li>Cách đặt vé</li></a>
                 <a href="usertrogiup.php"><li> Trợ giúp</li></a>
             </ul>
         </div>
@@ -70,7 +71,6 @@ require("../conn.php");
 require("../client/func.php");
 
 if (isset($_POST['submit'])) {
-    session_start();
     echo $_SESSION['flight_code'];
     $class = $_POST["class"];
     $departure_date = $_POST['departure_date'];
@@ -80,6 +80,7 @@ if (isset($_POST['submit'])) {
     $ticket_result = mysqli_query($conn, $ticket_sql);
     if ($ticket_result == 1) {
         echo "Thêm vé thành công! Mã vé: " . $ticket_code;
+        header("Location: userthanhtoan.php");
     } else {
         echo "Lỗi khi thêm vé: " . mysqli_error($conn);
     }

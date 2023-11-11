@@ -1,4 +1,3 @@
-
 <html>
 <body>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -37,36 +36,26 @@
 </body>
 <html>
 <div>
-    <form method="post">
-    <label>Loại vé:</label>
-    <select name="class">
-            <option value="ECONOMY">ECONOMY</option>
-            <option value="BUSINESS">BUSINESS</option>
-            <option value="FIRST-CLASS">FIRST-CLASS</option>
-        </select>
-    <label>Ngày khởi hành:</label><input type="date" name="departure_date">
-        <input type="submit" value="Đặt vé" name="submit">
-    </form>
-</div>
-
 <?php
 require("../conn.php");
 require("../client/func.php");
+session_start();
+$sql = "SELECT * FROM ticket WHERE PASSPORTNO = '{$_SESSION['passport']}'";
+$result = mysqli_query($conn, $sql);
 
-if (isset($_POST['submit'])) {
-    session_start();
-    echo $_SESSION['flight_code'];
-    $class = $_POST["class"];
-    $departure_date = $_POST['departure_date'];
-    $ticket_code =rand(100000000, 999999999); // Tạo mã vé ngẫu nhiên
-    $codeInt = (int)$ticket_code;
-    $ticket_sql = "INSERT INTO ticket (`TICKET_NUMBER`, `DATE_OF_BOOKING`, `DATE_OF_TRAVEL`, `CLASS`, `DATE_OF_CANCELLATION`, `PASSPORTNO`,`FLIGHT_CODE`) VALUES ('$codeInt','" .  $_SESSION['date'] . "','$departure_date', '$class','NULL','" . $_SESSION['passport'] . "','" . $_SESSION['flight_code'] . "')";
-    $ticket_result = mysqli_query($conn, $ticket_sql);
-    if ($ticket_result == 1) {
-        echo "Thêm vé thành công! Mã vé: " . $ticket_code;
-        header("Location: thanhtoan.php");
-    } else {
-        echo "Lỗi khi thêm vé: " . mysqli_error($conn);
+// Kiểm tra xem có bản ghi nào được trả về hay không
+if (mysqli_num_rows($result) > 0) {
+    // Duyệt qua từng bản ghi và hiển thị thông tin
+    while ($row = mysqli_fetch_assoc($result)) {
+        echo "ngày mua: " . $row["DATE_OF_BOOKING"] . "<br>";
+        echo "ngày đi: " . $row["DATE_OF_TRAVEL"] . "<br>";
+        echo "Hạng: " . $row["CLASS"] . "<br>";
+        echo "Ngày hủy: " . $row["DATE_OF_CANCELLATION"] . "<br>";
+        echo "Mã chuyến bay: " . $row["FLIGHT_CODE"] . "<br>";
+        echo "Mã vé:" . $row["TICKET_NUMBER"] . "<br><br>";
     }
+} else {
+    echo "Không có góp ý nào.";
 }
 ?>
+</div>

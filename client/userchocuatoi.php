@@ -30,6 +30,7 @@ if (isset($_POST['logout'])) {
                 <a href="usertimchuyenbay.php"><li>Tìm chuyến bay</li></a>
                 <a href="usercallme.php"><li>Liên hệ chúng tôi</li></a>
                 <a href="usercolab.php"><li>Hợp tác chúng tôi</li></a>
+                <a href="usercachdatve.php"><li>Cách đặt vé</li></a>
                 <a href="usertrogiup.php"><li> Trợ giúp</li></a>
             </ul>
         </div>

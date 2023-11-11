@@ -12,6 +12,7 @@
                 <a href="timchuyenbay.php"><li>Tìm chuyến bay</li></a>
                 <a href="callme.php"><li>Liên hệ chúng tôi</li></a>
                 <a href="colab.php"><li>Hợp tác chúng tôi</li></a>
+                <a href="cachdatve.php"><li>Cách đặt vé</li></a>
                 <a href="trogiup.php"><li> Trợ giúp</li></a>
             </ul>
         </div>
@@ -48,6 +49,7 @@
         <input type="submit" value="Tiếp tục" name="submit">
     </form>
 <?php
+session_start();
 require("../conn.php");
 require("../client/func.php");
 if (isset($_POST['submit'])){

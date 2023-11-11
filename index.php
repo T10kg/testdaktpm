@@ -16,10 +16,12 @@
                 <ul class="dropdown-menu">
                         <a href="index.php"><li>Trang chủ</li></a>
                         <a href="no_login/chocuatoi.php"><li>Đặt chỗ của tôi</li></a>
-                        <a href="themn.php"><li>Hộp thư của tôi</li></a>
+                        <a href="no_login/sms.php"><li>Hộp thư của tôi</li></a>
                         <a href="no_login/timchuyenbay.php"><li>Tìm chuyến bay</li></a>
                         <a href="no_login/callme.php"><li>Liên hệ chúng tôi</li></a>
                         <a href="no_login/colab.php"><li>Hợp tác chúng tôi</li></a>
+                        <a href="no_login/cachdatve.php"><li>Cách đặt vé</li></a>
+                        <a href="no_login/khuyenmai.php"><li>Cách đặt vé</li></a>
                         <a href="no_login/trogiup.php"><li> Trợ giúp</li></a>
                 </ul>
          </div>
@@ -41,7 +43,7 @@
                         <a href="client/register.php">Đăng kí</a>
                 </div>
            </div>
-        </div>
+    </div>
 </div>
 <div class="main">
         <h1 >
@@ -73,6 +75,21 @@
                         </div>
                 </div>
         </div>
+</div>
+<div class="main">
+        <h1 >
+        Các hãng tiêu biểu
+        </h1>
+        <div class="container">
+                <div >
+                <img src="img/VJ.png" width="200vw">
+                </div>
+                <div >
+                <img src="img/vna.png" width="200vw">
+                </div>
+                <div>
+                <img src="img/BB.jpg" width="200vw">
+                </div>
 </div>
 </body>
 </html>

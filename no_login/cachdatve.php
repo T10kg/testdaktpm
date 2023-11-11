@@ -1,8 +1,8 @@
-
 <html>
 <body>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="stylesheet" href="../css/client.css" />
+<link rel="stylesheet" href="../css/cho.css" />
 <div class="menuu">
         <div class="chucnang"><i class="fa-solid fa-bars-staggered"> <a href="../index.php">wearefly</a></i>
             <ul class="dropdown-menu">
@@ -33,40 +33,31 @@
                 <a href="../client/register.php">Đăng kí</a>
         </div>
     </div>
+</div><h3>Cách đặt vé với Wearefly</h3>
+<h6>Hoàn tất trong 5 phút</h6>
+<div class="parent">
+
+    <div class="box1">
+        <b>1</b><strong>Tìm chuyến bay</strong></br>
+        Bắt đầu bằng việc điền các thông tin tìm kiếm.
+    </div>
+    <div class="box2">
+        <b>2</b><strong>Chọn chuyến bay và đặt vé</strong></br>
+        Thông tin chuyến bay (hãng bay, lịch bay, giá vé, v.v.) đều được hiển thị trên trang kết quả tìm kiếm.
+    </div>
+    <div class="box3">
+        <b>3</b><strong>Điền thông tin liên lạc và thông tin hành khách</strong></br>
+        Sau khi đã chọn đúng chuyến bay, bạn cần điền thông tin người đặt vé và thông tin hành khách.
+    </div>
+    <div class="box4">
+        <b>4</b><strong>Tiến hành thanh toán</strong></br>
+        Có nhiều phương thức thanh toán khả dụng. Hãy chọn phương thức bạn mong muốn.
+    </div>
+    <div class="box5">
+        <b>5</b><strong>Nhận vé điện tử</strong></br>
+        Chúng tôi sẽ gửi vé điện tử vào email của bạn trong vòng 60 phút sau khi nhận được số tiền thanh toán.
+    </div>
 </div>
 </body>
-<html>
-<div>
-    <form method="post">
-    <label>Loại vé:</label>
-    <select name="class">
-            <option value="ECONOMY">ECONOMY</option>
-            <option value="BUSINESS">BUSINESS</option>
-            <option value="FIRST-CLASS">FIRST-CLASS</option>
-        </select>
-    <label>Ngày khởi hành:</label><input type="date" name="departure_date">
-        <input type="submit" value="Đặt vé" name="submit">
-    </form>
-</div>
+</html>
 
-<?php
-require("../conn.php");
-require("../client/func.php");
-
-if (isset($_POST['submit'])) {
-    session_start();
-    echo $_SESSION['flight_code'];
-    $class = $_POST["class"];
-    $departure_date = $_POST['departure_date'];
-    $ticket_code =rand(100000000, 999999999); // Tạo mã vé ngẫu nhiên
-    $codeInt = (int)$ticket_code;
-    $ticket_sql = "INSERT INTO ticket (`TICKET_NUMBER`, `DATE_OF_BOOKING`, `DATE_OF_TRAVEL`, `CLASS`, `DATE_OF_CANCELLATION`, `PASSPORTNO`,`FLIGHT_CODE`) VALUES ('$codeInt','" .  $_SESSION['date'] . "','$departure_date', '$class','NULL','" . $_SESSION['passport'] . "','" . $_SESSION['flight_code'] . "')";
-    $ticket_result = mysqli_query($conn, $ticket_sql);
-    if ($ticket_result == 1) {
-        echo "Thêm vé thành công! Mã vé: " . $ticket_code;
-        header("Location: thanhtoan.php");
-    } else {
-        echo "Lỗi khi thêm vé: " . mysqli_error($conn);
-    }
-}
-?>

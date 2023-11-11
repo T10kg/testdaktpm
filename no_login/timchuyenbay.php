@@ -12,6 +12,7 @@
                 <a href="timchuyenbay.php"><li>Tìm chuyến bay</li></a>
                 <a href="callme.php"><li>Liên hệ chúng tôi</li></a>
                 <a href="colab.php"><li>Hợp tác chúng tôi</li></a>
+                <a href="cachdatve.php"><li>Cách đặt vé</li></a>
                 <a href="trogiup.php"><li> Trợ giúp</li></a>
             </ul>
         </div>
@@ -68,6 +69,7 @@ $cityy = cityname($conn);
 
 <div>
     <?php
+    session_start();
     function findFlights($from, $arrive, $conn)
     {
         $sql = "SELECT * FROM flight WHERE IATA_START = '$from' AND IATA_END = '$arrive'";
@@ -88,7 +90,7 @@ $cityy = cityname($conn);
                 // ... in ra các thông tin khác của chuyến bay
                 echo '<form method="post" action="datcho.php">'; // Chỉ định URL của trang đặt vé ở đây
                 echo '<input type="hidden" name="flight_code" value="' . $row["FLIGHT_CODE"] . '">';
-                $_SESSION['flight_code']=$row["FLIGHT_CODE"] ;
+                $_SESSION['flight_code']=$row["FLIGHT_CODE"];
                 echo $_SESSION['flight_code'];
                 echo '<input type="submit" value="Đặt vé" name="book">';
                 echo '</form>';

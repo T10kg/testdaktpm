@@ -1,0 +1,24 @@
+.parent{
+    width: 900px;
+}
+.parent div:nth-child(odd) {
+	background-color: lightgray;
+    margin: 20px;
+}
+
+.parent div:nth-child(even) {
+	background-color: white;
+    margin: 20px;
+}
+.box1, .box3, .box5 {
+    width: 300px;
+    text-align: right;
+    padding-left: 55%;
+}
+.box2, .box4 {
+    width: 300px;
+    padding-right: 80%;
+}
+h3{
+    font-family: arial;
+}

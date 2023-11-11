@@ -30,6 +30,7 @@ if (isset($_POST['logout'])) {
                 <a href="usertimchuyenbay.php"><li>Tìm chuyến bay</li></a>
                 <a href="usercallme.php"><li>Liên hệ chúng tôi</li></a>
                 <a href="usercolab.php"><li>Hợp tác chúng tôi</li></a>
+                <a href="usercachdatve.php"><li>Cách đặt vé</li></a>
                 <a href="usertrogiup.php"><li> Trợ giúp</li></a>
             </ul>
         </div>
@@ -50,31 +51,26 @@ if (isset($_POST['logout'])) {
         </div> 
     </div>
 </div>  
-<div>
-<form method="post" action="logincheck.php">
-        <label for="email">Email liên hệ:</label>
-        <input type="text" id="email" name="email" required><br><br>
-        <label for="gopy">Ý kiến đóng góp:</label>
-        <input type="text" id="gopy" name="gopy" required><br><br>
-        <input type="submit" value="Gửi góp ý" name="submit">
-    </form>
-</div> 
 </body>
 <html>
-
+<h2>Các góp ý đã gửi:</h2>
 <?php
 require("../conn.php");
 require("func.php");
+// Truy vấn database để lấy danh sách các góp ý đã gửi bởi người dùng hiện tại
+$sql = "SELECT * FROM support WHERE USERNAME = '{$_SESSION['username']}'";
+$result = mysqli_query($conn, $sql);
 
-if (isset($_POST['submit'])) {
-    $email = $_POST["email"];
-    $gopy = $_POST["gopy"];
-    $sql="INSERT INTO `support`(`EMAIL`, `TEXT`) VALUES ('$email','$gopy')";
-    $result=mysqli_query ($conn, $sql);
-    if ($result==1) {
-        header("Location: usersms.php"); // Điều hướng đến trang admin.php
-        // Dừng thực thi mã sau khi điều hướng
-    } 
+// Kiểm tra xem có bản ghi nào được trả về hay không
+if (mysqli_num_rows($result) > 0) {
+    // Duyệt qua từng bản ghi và hiển thị thông tin
+    while ($row = mysqli_fetch_assoc($result)) {
+        echo "<p>Email: " . $row["EMAIL"] . "</p>";
+        echo "<p>Góp ý: " . $row["TEXT"] . "</p>";
+        echo "<hr>";
+    }
+} else {
+    echo "Không có góp ý nào.";
 }
-
 ?>
+
