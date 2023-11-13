@@ -36,37 +36,59 @@
 </div>
 </body>
 <html>
-<div>
+<<div>
     <form method="post">
-    <label>Loại vé:</label>
-    <select name="class">
+        <label>Loại vé:</label>
+        <select name="class">
             <option value="ECONOMY">ECONOMY</option>
             <option value="BUSINESS">BUSINESS</option>
             <option value="FIRST-CLASS">FIRST-CLASS</option>
         </select>
-    <label>Ngày khởi hành:</label><input type="date" name="departure_date">
+        <label>Ngày khởi hành:</label>
+        <input type="date" name="departure_date">
+        <?php
+        session_start();
+        $passengerCount = $_SESSION['passengerCount'];
+        for ($i = 0; $i < $passengerCount; $i++) {
+            $passengerIndex = $i + 1;
+            echo  $passengerIndex;
+            ?>
+            <label>Hộ chiếu hành khách <?php echo $passengerIndex; ?>:</label>
+            <input type="text" name="passport<?php echo $passengerIndex; ?>">
+            <?php
+        }
+        ?>
+
         <input type="submit" value="Đặt vé" name="submit">
     </form>
 </div>
-
 <?php
 require("../conn.php");
 require("../client/func.php");
 
 if (isset($_POST['submit'])) {
-    session_start();
+    $_SESSION['class'] = $_POST['class'];
     echo $_SESSION['flight_code'];
     $class = $_POST["class"];
     $departure_date = $_POST['departure_date'];
-    $ticket_code =rand(100000000, 999999999); // Tạo mã vé ngẫu nhiên
-    $codeInt = (int)$ticket_code;
-    $ticket_sql = "INSERT INTO ticket (`TICKET_NUMBER`, `DATE_OF_BOOKING`, `DATE_OF_TRAVEL`, `CLASS`, `DATE_OF_CANCELLATION`, `PASSPORTNO`,`FLIGHT_CODE`) VALUES ('$codeInt','" .  $_SESSION['date'] . "','$departure_date', '$class','NULL','" . $_SESSION['passport'] . "','" . $_SESSION['flight_code'] . "')";
-    $ticket_result = mysqli_query($conn, $ticket_sql);
-    if ($ticket_result == 1) {
-        echo "Thêm vé thành công! Mã vé: " . $ticket_code;
-        header("Location: thanhtoan.php");
-    } else {
-        echo "Lỗi khi thêm vé: " . mysqli_error($conn);
+
+    // Lặp qua thông tin của từng hành khách
+    for ($i = 1; $i <= $passengerCount; $i++) {
+        $passport = $_POST['passport' . $i];
+        $_SESSION['passport']=$passport;
+        $ticket_code = rand(100000000, 999999999); // Tạo mã vé ngẫu nhiên
+        $codeInt = (int)$ticket_code;
+
+        $ticket_sql = "INSERT INTO ticket (`TICKET_NUMBER`, `DATE_OF_BOOKING`, `DATE_OF_TRAVEL`, `CLASS`, `DATE_OF_CANCELLATION`, `PASSPORTNO`,`FLIGHT_CODE`) VALUES ('$codeInt','" . $_SESSION['date'] . "','$departure_date', '$class','NULL','$passport','" . $_SESSION['flight_code'] . "')";
+        $ticket_result = mysqli_query($conn, $ticket_sql);
+
+        if ($ticket_result == 1) {
+            echo "Thêm vé thành công cho hành khách thứ " . $i . "! Mã vé: " . $ticket_code . "<br>";
+        } else {
+            echo "Lỗi khi thêm vé cho hành khách thứ " . $i . ": " . mysqli_error($conn) . "<br>";
+        }
     }
+
+    header("Location: chongoi.php");
 }
 ?>

@@ -63,6 +63,8 @@ $cityy = cityname($conn);
         }
         ?>
     </select>
+    <label for="passenger-count">Số hành khách:</label> 
+            <input type="number" id="passenger-count" name="passengerCount" min="1" max="4" value="1">
 
     <input type="submit" value="Tìm chuyến bay" name="submit">
 </form>
@@ -94,6 +96,8 @@ $cityy = cityname($conn);
                 echo $_SESSION['flight_code'];
                 echo '<input type="submit" value="Đặt vé" name="book">';
                 echo '</form>';
+                $_SESSION['passengerCount'] = $_POST['passengerCount'];
+                echo $_SESSION['passengerCount'];
             }
         } else {
             echo "Không tìm thấy chuyến bay từ $from đến $arrive.";
