@@ -70,6 +70,7 @@ if (mysqli_num_rows($result) > 0) {
         echo "Ngày hủy: " . $row["DATE_OF_CANCELLATION"] . "<br>";
         echo "Mã chuyến bay: " . $row["FLIGHT_CODE"] . "<br>";
         echo "Mã vé:" . $row["TICKET_NUMBER"] . "<br><br>";
+        header("refresh:2; url=usertimchuyenbay.php");
     }
 } else {
     echo "Không có góp ý nào.";

@@ -79,7 +79,7 @@ if (isset($_POST['online_payment'])) {
     // Hiển thị mã QR code cho người dùng
     echo "<h2>Mã QR code</h2>";
     echo "<img src='$qrCodeImage' alt='QR Code'>";
-    echo '<form method="post" action="thongtinve.php">';
+    echo '<form method="post" action="userthongtinve.php">';
     echo  '<input type="submit" name="end" value="Xác nhập thanh toán">';
     echo '</form>';
 }
@@ -121,6 +121,8 @@ if (isset($_POST['confirm_store1'])) {
     echo "<p>Bạn đã chọn cửa hàng: $selectedStore</p>";
     echo "<button>Xác nhận thanh toán</button>";
     echo '</form>';
+    echo "thanh toán thành công";
+
 }
 ?>
 

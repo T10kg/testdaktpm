@@ -65,10 +65,7 @@ require("func.php");
 
 if (isset($_POST['submit'])) {
     $searchTerm = $_POST["searchTerm"];
-
-    // Kiểm tra xem người dùng đã nhập mã vẽ hay số hộ chiếu (passport)
-    // và tìm kiếm thông tin chuyến bay tương ứng
-    $sql = "SELECT * FROM ticket WHERE  PASSPORTNO = ?";
+    $sql = "SELECT * FROM ticket WHERE  PASSPORTNO =?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("s", $searchTerm);
     $stmt->execute();
@@ -77,17 +74,24 @@ if (isset($_POST['submit'])) {
     if ($result->num_rows > 0) {
         // Hiển thị thông tin chuyến bay
         while ($row = $result->fetch_assoc()) {
+            // Hiển thị thông tin chuyến bay
             echo "ngày mua: " . $row["DATE_OF_BOOKING"] . "<br>";
             echo "ngày đi: " . $row["DATE_OF_TRAVEL"] . "<br>";
             echo "Hạng: " . $row["CLASS"] . "<br>";
             echo "Ngày hủy: " . $row["DATE_OF_CANCELLATION"] . "<br>";
             echo "Mã chuyến bay: " . $row["FLIGHT_CODE"] . "<br><br>";
             echo "Mã vé:" . $row["TICKET_NUMBER"] . "<br><br>";
-            exit();
+            echo '<form method="post" action="userhuyve.php">';
+            echo '<input type="hidden" name="ticketNumber" value="' . $row["TICKET_NUMBER"] . '">';
+            echo '<input type="submit" value="Hủy vé" name="huy">';
+            echo '</form>';
+            echo "<br>";
+            header("refresh:2; url=userchocuatoi.php");
         }
     } else {
         echo "Không tìm thấy thông tin chuyến bay.";
     }
 }
+
 ?>
 

@@ -4,6 +4,7 @@
         $result=mysqli_query ($conn, $sql);
         return $result;
     }
+    
     function cityname($conn){
         $sql="SELECT * FROM airport ";
         return mysqli_query($conn, $sql);
