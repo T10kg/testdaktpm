@@ -7,19 +7,20 @@ body {
     padding: 0;
 }
 .menuu {
-    position: fixed;
+    position: sticky;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #f2f2f2;
     padding: 10px;
     width: 1200px;
+    z-index: 9999;
 }
 .banner{
-    background-image: url('../img/milky-way-starry-sky-night-sky-star-956981.jpeg');   
+    background-image: url('../img/background\(1\).jpg');   
     position: relative;
     width: 1200px;
-    height: 200px;
+    height: 250px;
 }
 
 .chucnang {
@@ -77,3 +78,10 @@ body {
     color: #333;
     border: solid;
 }
+.colab{
+    margin-top: 25px;
+}
+.like{
+    display: flex;
+
+  }

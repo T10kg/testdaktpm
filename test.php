@@ -10,7 +10,7 @@
 <div class="mainn">
             <div class="hello">
                 <h2>Wearefly</h2>
-                <div class="textt"><a href="nologin/colab.php"> Hợp tác với chúng tôi</a></div>
+                <div class="textt"><a href="no_login/colab.php"> Hợp tác với chúng tôi</a></div>
                 <h3>Các hãng hàng không</h3>
                 <div class="imgg">
                 <img src="img/vna.png" width="100vw">

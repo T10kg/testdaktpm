@@ -1,4 +1,5 @@
 .mainn{
+    margin-top: 10px;
     background-image: url("../img/bannerr.jpg");
     height: 500px;
     width: 1500px;
@@ -28,7 +29,7 @@ h2{
     width: 330px;
 }
 img{
-    width: 100px;
+
     background-color: white;
 }
 a{

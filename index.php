@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="css/clientt.css" />
+    <link rel="stylesheet" href="css/client.css" />
     <link rel="stylesheet" href="css/main.css" />
 </head>
 <body>
@@ -45,6 +45,7 @@
            </div>
     </div>
 </div>
+
 <div class="main">
         <h1 >
         Tại sao nên đặt chỗ với Wearefly?
@@ -88,13 +89,29 @@
                 <img src="img/vna.png" width="200vw">
                 </div>
                 <div>
-                <img src="img/BB.jpg" width="200vw">
+                <img src="img/BB.jpg" width="250vw">
+                </div>
+        </div>
+</div>
+
+</body>
+</html>
+<h1>Các địa điểm nổi bật</h1>
+<div class="like">
+        <div class="imggg" >
+                <?php require("no_login/saigon.php") ?>
+                <h3>Sài Gòn</h3>
+                </div>
+                <div class="imggg" >
+                <?php require("no_login/hanoi.php") ?>
+                <h3>Hà Nội</h3>
+                </div>
+                <div class="imggg" >
+                <?php require("no_login/cantho.php") ?>
+                <h3>Cần Thơ</h3>
                 </div>
 </div>
 
-</div>
-</body>
-</html>
 <div >
         <?php require("test.php") ?>
             </div>

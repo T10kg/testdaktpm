@@ -36,7 +36,7 @@
 </div>
 </body>
 <html>
-<h2>Tìm kiếm thông tin chuyến bay</h2>
+<h2 >Tìm kiếm thông tin chuyến bay</h2>
 <form method="post">
     <label for="searchTerm"> số hộ chiếu:</label>
     <input type="text" id="searchTerm" name="searchTerm" required><br><br>

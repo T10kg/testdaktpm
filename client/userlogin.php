@@ -93,5 +93,40 @@ if (isset($_POST['logout'])) {
                 </div>
         </div>
 </div>
+<div class="main">
+        <h1 >
+        Các hãng tiêu biểu
+        </h1>
+        <div class="container">
+                <div >
+                <img src="../img/VJ.png" width="200vw">
+                </div>
+                <div >
+                <img src="../img/vna.png" width="200vw">
+                </div>
+                <div>
+                <img src="../img/BB.jpg" width="250vw">
+                </div>
+        </div>
+</div>
 </body>
 </html>
+<h1>Các địa điểm nổi bật</h1>
+<div class="like">
+        <div class="imggg" >
+                <?php require("usersaigon.php") ?>
+                <h3>Sài Gòn</h3>
+                </div>
+                <div class="imggg" >
+                <?php require("../no_login/hanoi.php") ?>
+                <h3>Hà Nội</h3>
+                </div>
+                <div class="imggg" >
+                <?php require("../no_login/cantho.php") ?>
+                <h3>Cần Thơ</h3>
+                </div>
+</div>
+
+<div >
+        <?php require("../test.php") ?>
+            </div>

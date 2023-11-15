@@ -36,8 +36,8 @@
 </div>
 </body>
 <html>
-<div>
-    <h1>Hợp tác với các hãng hàng không hàng đầu Việt Nam</h1>
+<div class="colab">
+    <p><h1>Hợp tác với các hãng hàng không hàng đầu Việt Nam</h1></p>
     Với tiêu chí tạo ra một plasform đem lại sự tin tưởng, an toàn và tiết kiệm đến với người dùng.</br>
     <h5>Luôn chọn các dịch vụ tốt nhất để đưa đến người tiêu dùng</h5>
 </div>
