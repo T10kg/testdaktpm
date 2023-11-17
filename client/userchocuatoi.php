@@ -75,18 +75,19 @@ if (isset($_POST['submit'])) {
         // Hiển thị thông tin chuyến bay
         while ($row = $result->fetch_assoc()) {
             // Hiển thị thông tin chuyến bay
-            echo "ngày mua: " . $row["DATE_OF_BOOKING"] . "<br>";
-            echo "ngày đi: " . $row["DATE_OF_TRAVEL"] . "<br>";
-            echo "Hạng: " . $row["CLASS"] . "<br>";
-            echo "Ngày hủy: " . $row["DATE_OF_CANCELLATION"] . "<br>";
-            echo "Mã chuyến bay: " . $row["FLIGHT_CODE"] . "<br><br>";
-            echo "Mã vé:" . $row["TICKET_NUMBER"] . "<br><br>";
+            
+            echo '<div class="thongtin">';
+            echo '<p>Ngày mua: ' . $row["DATE_OF_BOOKING"] . '</p>';
+            echo '<p>Ngày đi: ' . $row["DATE_OF_TRAVEL"] . '</p>';
+            echo '<p>Hạng: ' . $row["CLASS"] . '</p>';
+            echo '<p>Ngày hủy: ' . $row["DATE_OF_CANCELLATION"] . '</p>';
+            echo '<p>Mã chuyến bay: ' . $row["FLIGHT_CODE"] . '</p>';
+            echo '<p>Mã vé: ' . $row["TICKET_NUMBER"] . '</p>';
+            echo '</div>';
             echo '<form method="post" action="userhuyve.php">';
             echo '<input type="hidden" name="ticketNumber" value="' . $row["TICKET_NUMBER"] . '">';
             echo '<input type="submit" value="Hủy vé" name="huy">';
             echo '</form>';
-            echo "<br>";
-            header("refresh:2; url=userchocuatoi.php");
         }
     } else {
         echo "Không tìm thấy thông tin chuyến bay.";
@@ -94,4 +95,70 @@ if (isset($_POST['submit'])) {
 }
 
 ?>
+<style>
+  body{
+        background-image: url("../img/map.jpg");
+        background-size:100%;
+    }
+    .thongtin {
+    background-image: url("../img/ve.jpg");
+    background-size:100%;
+    width: 700px;
+    margin-top:50px;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height:300px;
+}
 
+
+.thongtin p:last-child {
+    margin-bottom: 0;
+}
+.thongtin {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Chia thành 2 cột bằng nhau */
+    grid-gap: 10px; /* Khoảng cách giữa các cột */
+}
+
+.thongtin p {
+    text-decoration: underline;
+    font-size: 1.5em;
+    margin: 38px; /* Loại bỏ khoảng trống giữa các dòng trong mỗi cột */
+}
+input[type="submit"],
+button {
+    padding: 10px 20px;
+    background-color: #3487FF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+input[type="submit"]:hover,
+button:hover {
+    background-color: red;
+}
+form {
+    width: 300px;
+    margin: 0 auto;
+}
+label {
+    font-size: 1em;
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+</style>

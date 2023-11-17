@@ -36,24 +36,70 @@
 </div>
 </body>
 </html>
-<h3>Cách huỷ vé và hoàn tiền cho đặt chỗ máy bay </h3>
-<h5>
-Trước khi huỷ đặt chỗ, vui lòng kiểm tra đặt chỗ của bạn có được hoàn tiền hay không. Chỉ cần vào vé điện tử của bạn, chọn nút Hoàn tiền, và chọn Chính sách.
-</h5>
+<div class="new1">
+<h3>Làm cách nào để kiểm tra trạng thái hoàn tiền của tôi</h3>
+Để kiểm tra tình trạng hoàn tiền của bạn trên trang web Traveloka, vui lòng làm theo những bước sau:</br>
 <ul>
-    <li>Được hoàn vé  có nghĩa là bạn được hoàn dưới dạng tín dụng du lịch hoặc hoàn tiền (tùy theo quy định hãng hàng không). Lưu ý, việc yêu cầu hủy đặt chỗ sẽ bị tính phí theo chính sách được thông tin trên vé.</li>
-    <li>Hoàn vé một phần có nghĩa là bạn được hoàn một chuyến bay trong vé khứ hồi của bạn. Hình thức hoàn có thể là tín dụng du lịch hoặc hoàn tiền tùy theo chính sách của hãng hàng không</li>
-    <li>Không hoàn có nghĩa là bạn sẽ không được hoàn lại tiền khi hủy hoặc thay đổi lịch bay</li>
+    1. Đăng nhập vào tài khoản Traveloka của bạn.</br>
+    2. Nhấp chuột vào tài khoản của bạn ở góc trên bên phải, sau đó chọn Đặt chỗ của tôi.</br>
+    3. Chọn đặt chỗ bạn muốnn kiểm tra tình trạng hoàn tiền, sau đó nhấp chuột chọn Chi tiết.</br>
+    4. Trong phần Chi tiết đặt chỗ, chọn Yêu cầu hoàn tiền.</br> 
+    5. Trong phần Lịch sử hoàn tiền, chọn Xem chi tiết và bạn sẽ thấy tình trạng hoàn tiền của mình. </br>
 </ul>
-<h5>Để huỷ vé và gửi yêu cầu hoàn tiền, vui lòng làm theo các bước đơn giản sau:</h5></br>
-<h5>1.Đăng nhập vào tài khoản Traveloka, đến phần Đặt chỗ của tôi.</h5>
-<h5>2.Chọn đặt chỗ bạn muốn huỷ.</h5>
-<h5>3.Chọn Quản lý đặt chỗ, sau đó chọn Hoàn tiền.</h5>
-<h5>Nếu bạn không có tài khoản Traveloka, bạn có thể Đăng ký ngay. Lưu ý rằng bạn phải đăng ký với địa chỉ email hoặc số điện thoại đã sử dụng khi đặt chỗ.</h5>
-<ul>Lưu ý:
-    <li>Số tiền hoàn lại có thể khác nhau tuỳ vào chính sách của hãng hàng không, lý do hoàn tiền, và thời gian từ ngày gửi yêu cầu hoàn tiền đến ngày khởi hành dự kiến.</li>
+<b>Lưu ý</b>
+<ul>
+    <li>Đối với hoàn tiền vé máy bay, số tiền bạn sẽ nhận được tuỳ vào chính sách của hãng, lý do hoàn tiền, và khoảng thời giann giữa ngày yêu cầu hoàn tiền và ngày khởi hành của bạn. </li>
+    <li>Để kiểm tra chính sách hoàn tiền của hãng, chọn Chính sách hãng hàng không, và chọn hãng tương ứng.</li>
+    <li>Sau khi quy trình hoàn tiền của bạn đã hoàn tất, bạn sẽ nhận được thông báo qua email. Số tiền hoàn lại sẽ được chuyển qua phương thức thanh toán bạn đã sử dụng khi đặt chỗ. Vui lòng kiểm tra tài khoản tương ứng của bạn. </li>
+</ul></div>
+<style>
+    body {
+        
+        background-image: url("../img/map.jpg");
+        background-size:100%;
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        color: black;
+        margin: 0;
+        padding: 20px;
+    }
 
-</ul>
-Để được hướng dẫn cụ thể cách hoàn tiền, vui lòng xem trang thông tin Quy trình hoàn tiền. Nếu bạn gặp khó khăn khi gửi yêu cầu hoàn tiền, vui lòng Liên hệ chúng tôi.
-Bài viết liên quan:</br>
-Kiểm tra tình trạng hoàn tiền</br>
+    h1 {
+        font-size: 24px;
+        font-weight: bold;
+        margin: 20px 0;
+    }
+
+    h3 {
+        font-size: 20px;
+        font-weight: bold;
+        margin: 10px 0;
+    }
+
+    h5 {
+        font-size: 16px;
+        margin: 10px 0;
+    }
+
+    ul {
+        margin: 10px 0;
+        padding-left: 20px;
+    }
+
+    li {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    ul li {
+        list-style-type: disc;
+    }
+
+    ul ul li {
+        list-style-type: circle;
+    }
+    .new1{
+        width: 900px;
+        text-align: left;
+    }
+</style>

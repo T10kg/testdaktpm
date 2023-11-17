@@ -26,19 +26,24 @@
         <div class="sp">
                 <a href="chocuatoi.php">Đặt chỗ của tôi</a>
         </div>
-        <div class="sp">
+        <div class="sp2">
                 <a href="../client/login.php">Đăng nhập</a>
         </div>
-        <div class="sp">
+        <div class="sp1">
                 <a href="../client/register.php">Đăng kí</a>
         </div>
     </div>
 </div>
 <div>
-        Vui lòng đăng nhập
+       <h2>Vui lòng đăng nhập</h2> 
 </div>
-<div class="sp">
-                     <button><a href="../client/login.php">Đăng nhập</a></button>
-                </div>
 </body>
 <html>
+<style>
+    body {
+        
+        background-image: url("../img/map.jpg");
+        background-size:100%;
+    }
+
+</style>

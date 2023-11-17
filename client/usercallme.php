@@ -51,7 +51,7 @@ if (isset($_POST['logout'])) {
         </div> 
     </div>
 </div>  
-<div>
+<div class="callme">
 <form method="post">
         <label for="email">Email liên hệ:</label>
         <input type="text" id="email" name="email" required><br><br>
@@ -78,3 +78,48 @@ if (isset($_POST['phanhoi'])) {
 }
 
 ?>
+<style>
+   body{
+        background-image: url("../img/map.jpg");
+        background-size:100%;
+    }
+   .callme{
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top:50px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #3487FF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: red;
+}
+</style>

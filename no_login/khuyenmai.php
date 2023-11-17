@@ -26,10 +26,10 @@
         <div class="sp">
                 <a href="chocuatoi.php">Đặt chỗ của tôi</a>
         </div>
-        <div class="sp">
+        <div class="sp1">
                 <a href="../client/login.php">Đăng nhập</a>
         </div>
-        <div class="sp">
+        <div class="sp2">
                 <a href="../client/register.php">Đăng kí</a>
         </div>
     </div>

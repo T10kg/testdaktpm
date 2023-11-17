@@ -7,12 +7,12 @@ body {
     padding: 0;
 }
 .menuu {
+    font-family: Helvetica, sans-serif;
     position: sticky;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #f2f2f2;
-    padding: 10px;
     width: 1200px;
     z-index: 9999;
 }
@@ -56,19 +56,12 @@ body {
     visibility: visible;
 }
 
-.menu {
-    display: flex;
-}
 
 .sp {
     position: relative;
     margin-left: 10px;
 }
 
-.sp a {
-    text-decoration: none;
-    color: #333;
-}
 
 /* Additional styling for the dropdown icon */
 .fa-bars-staggered {
@@ -85,3 +78,48 @@ body {
     display: flex;
 
   }
+.menu {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f2f2f2;
+
+}
+
+.sp {
+    margin-right: 10px;
+}
+
+.sp a {
+    text-decoration: none;
+    color: #333;
+    padding: 5px;
+    display: block;
+    margin-top: 20px;
+}
+.sp2 a{
+    display: block;
+    margin-left:20px;
+}
+.sp2 a {
+    display: block;
+    text-decoration: none;
+    background-color: #3487FF;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.sp2 a:hover {
+    background-color: red;
+}
+.sp1 a{
+    display: block;
+    text-decoration: none;
+    color:gray;
+    margin-top: 25px;
+}
+.sp p{
+    display: block;
+    margin-top: 19px;
+}

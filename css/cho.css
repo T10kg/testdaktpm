@@ -2,12 +2,10 @@
     width: 900px;
 }
 .parent div:nth-child(odd) {
-	background-color: lightgray;
     margin: 20px;
 }
 
 .parent div:nth-child(even) {
-	background-color: white;
     margin: 20px;
 }
 .box1, .box3, .box5 {
@@ -20,5 +18,6 @@
     padding-right: 80%;
 }
 h3{
+    font-size: 1.5em;
     font-family: arial;
 }

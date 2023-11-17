@@ -65,12 +65,44 @@ $result = mysqli_query($conn, $sql);
 if (mysqli_num_rows($result) > 0) {
     // Duyệt qua từng bản ghi và hiển thị thông tin
     while ($row = mysqli_fetch_assoc($result)) {
+        echo '<div class="thongtin">';
         echo "<p>Email: " . $row["EMAIL"] . "</p>";
         echo "<p>Góp ý: " . $row["TEXT"] . "</p>";
         echo "<hr>";
+        echo '</div>';
     }
 } else {
     echo "Không có góp ý nào.";
 }
 ?>
+<style>
+      body{
+        background-image: url("../img/map.jpg");
+        background-size:100%;
+    }
+    .thongtin {
+    background-image: url("../img/sf.jpg");
+    background-size:100%;
+    width: 700px;
+    margin-top:20px;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    height:300px;
+}
 
+
+.thongtin p:last-child {
+    margin-bottom: 0;
+}
+.thongtin {
+    display: grid;
+    grid-gap: 10px; /* Khoảng cách giữa các cột */
+}
+
+.thongtin p {
+    text-decoration: underline;
+    font-size: 1.5em;
+    margin: 38px; 
+}
+</style>

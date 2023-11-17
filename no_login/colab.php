@@ -26,10 +26,10 @@
         <div class="sp">
                 <a href="chocuatoi.php">Đặt chỗ của tôi</a>
         </div>
-        <div class="sp">
+        <div class="sp1">
                 <a href="../client/login.php">Đăng nhập</a>
         </div>
-        <div class="sp">
+        <div class="sp2">
                 <a href="../client/register.php">Đăng kí</a>
         </div>
     </div>
@@ -41,9 +41,71 @@
     Với tiêu chí tạo ra một plasform đem lại sự tin tưởng, an toàn và tiết kiệm đến với người dùng.</br>
     <h5>Luôn chọn các dịch vụ tốt nhất để đưa đến người tiêu dùng</h5>
 </div>
-<div>
-    <h3>Bắt đầu sử dụng trong 2 bước đơn giản</h3>
-    <div>Truy cập vào trang wearefly.com </div>
-    <div>Sau đó chọn mục tạo tài khoản</div>
-    <div>Sau khi tao tài khoảng bắt đầu trải nghiệm những dịch vụ của chúng tôi</div>
+<h3>Bắt đầu sử dụng trong 2 bước đơn giản</h3>
+<div class="start">
+    <div>
+        <img src="../img/search.webp" width="150px">
+        <h5>Truy cập vào trang wearefly.com </h5>
+    </div>
+    <div>
+        <img src="../img/taotaikhoan.webp" width="150px">
+        <h5>Sau đó chọn mục tạo tài khoản</h5>
+    </div>
+    <div>
+        <img src="../img/start.webp" width="150px">
+        <h5>Sau khi tao tài khoảng bắt đầu trải nghiệm những dịch vụ của chúng tôi</h5>
+    </div>
 </div>
+<style>
+    body{
+        background-image: url("../img/map.jpg");
+        background-size:100%;
+    }
+    .colab {
+        margin-right:30%;
+        text-align: left;
+        margin-bottom: 20px;
+    }
+
+    .colab h1 {
+        font-size: 1.5em;
+        color: black;
+        margin-bottom: 10px;
+    }
+
+    .colab h5 {
+        font-size: 1.5em;
+        color: black;
+        margin-bottom: 20px;
+    }
+
+
+    div {
+        font-size: 16px;
+        color: black;
+    }
+        .start {
+        margin-right: 30%;
+        width:150px;
+        display: flex;
+        text-align: left;
+        margin-bottom: 20px;
+    }
+
+    h3 { 
+        font-size: 1.5em;
+        margin-right: 38%;
+        text-align:left;
+        color: black;
+        margin-bottom: 10px;
+        border-bottom: 1px dashed #333;
+        padding-bottom: 5px;
+    }
+    .start div {
+        font-size: 1.5em;
+    margin-right: 100px;
+}
+
+
+
+</style>

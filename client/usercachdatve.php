@@ -55,7 +55,7 @@ if (isset($_POST['logout'])) {
 </div>
 </body>
 <html>
-<h2>Cách đặt vé với Wearefly</h2>
+<h3>Cách đặt vé với Wearefly</h3>
 <h6>Hoàn tất trong 5 phút</h6>
 <div class="parent">
 
@@ -83,3 +83,10 @@ if (isset($_POST['logout'])) {
 </body>
 </html>
 
+<style>
+    body {
+        
+        background-image: url("../img/map.jpg");
+        background-size:100%;
+    }
+</style>

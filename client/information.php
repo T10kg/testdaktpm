@@ -1,5 +1,6 @@
-<h2>Thông tin khách hàng</h2>
+<div class="infor">
     <form method="post">
+        <h2>Thông tin khách hàng:</h2>
         <label> PASSPORT</label> <input type="text" name="passport">
         <label> Họ </label> <input type="text" name="ho">
         <label> tên lót </label> <input type="text" name="ten">
@@ -12,6 +13,7 @@
         <input type="text" id="username" name="username" required><br><br>
         <input type="submit" value="Lưu thông tin" name="submit">
     </form>
+</div>
 <?php
 require("../conn.php");
 require("func.php");
@@ -37,3 +39,36 @@ if (isset($_POST['submit'])){
     }
 
 ?>
+<style>
+    body{
+        background-image: url("../img/rst(2).webp");
+        background-size:100%;
+    }
+    form {
+        width: 400px;
+        margin: 0 auto;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    input[type="text"] {
+        width: 100%;
+        padding: 5px;
+        margin-bottom: 10px;
+    }
+
+    input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+</style>

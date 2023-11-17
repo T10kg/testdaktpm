@@ -36,15 +36,77 @@
 </div>
 </body>
 </html>
-<h3>Cách làm thủ tục trực tuyến </h3>
-Tính năng check-in trực tuyến giúp bạn check-in trước khi đến sân bay. Bạn có thể làm như vậy thông qua ứng dụng hoặc trang web Traveloka hoặc làm theo các bước đơn giản sau:
+<div class="new1">
+<h3>Cách huỷ vé và hoàn tiền cho đặt chỗ máy bay </h3>
+<h5>
+Trước khi huỷ đặt chỗ, vui lòng kiểm tra đặt chỗ của bạn có được hoàn tiền hay không. Chỉ cần vào vé điện tử của bạn, chọn nút Hoàn tiền, và chọn Chính sách.
+</h5>
 <ul>
-        1.Đăng nhập vào tài khoản Traveloka.
-        2.Mở vé điện tử trong Đặt chỗ của tôi.
-        3.Chạm Làm thủ tục trực tuyến.
-        4.Sau khi đã đồng ý với chính sách Làm thủ tục trực tuyến, điền thông tin làm thủ tục của bạn. Sau đó, chạm vào nút Làm thủ tục.
-        5.Sau khi đã làm thủ tục thành công, bạn sẽ có được thẻ lên máy bay trong vé điện tử của bạn. Thẻ này cũng sẽ được gửi đến email của bạn.
+    <li>Được hoàn vé  có nghĩa là bạn được hoàn dưới dạng tín dụng du lịch hoặc hoàn tiền (tùy theo quy định hãng hàng không). Lưu ý, việc yêu cầu hủy đặt chỗ sẽ bị tính phí theo chính sách được thông tin trên vé.</li>
+    <li>Hoàn vé một phần có nghĩa là bạn được hoàn một chuyến bay trong vé khứ hồi của bạn. Hình thức hoàn có thể là tín dụng du lịch hoặc hoàn tiền tùy theo chính sách của hãng hàng không</li>
+    <li>Không hoàn có nghĩa là bạn sẽ không được hoàn lại tiền khi hủy hoặc thay đổi lịch bay</li>
 </ul>
-Vui lòng lưu ý rằng bạn phải mang bản in thẻ lên máy bay đến cửa khởi hành. Nếu không thể tự in, bạn có thể in thẻ lên máy bay tại quầy làm thủ tục.</br>
-Lưu ý: Với người dùng chọn quốc gia là Indonesia, bạn có thể thấy phần Làm thủ tục trực tuyến trong trang chủ ứng dụng Traveloka. Nếu không thể tìm thấy, vui lòng đảm bảo bạn đã đăng nhập vào tài khoản Traveloka của mình.</br>
-Vui lòng kiểm tra hãng hàng không của bạn có hỗ trợ làm thủ tục trực tuyến. Đến trang Làm thủ tục rực tuyến để xem danh sách hãng hàng không có hỗ trợ.
+<h5>Để huỷ vé và gửi yêu cầu hoàn tiền, vui lòng làm theo các bước đơn giản sau:</h5></br>
+<h5>1.Đăng nhập vào tài khoản Traveloka, đến phần Đặt chỗ của tôi.</h5>
+<h5>2.Chọn đặt chỗ bạn muốn huỷ.</h5>
+<h5>3.Chọn Quản lý đặt chỗ, sau đó chọn Hoàn tiền.</h5>
+<h5>Nếu bạn không có tài khoản Traveloka, bạn có thể Đăng ký ngay. Lưu ý rằng bạn phải đăng ký với địa chỉ email hoặc số điện thoại đã sử dụng khi đặt chỗ.</h5>
+<ul>Lưu ý:
+    <li>Số tiền hoàn lại có thể khác nhau tuỳ vào chính sách của hãng hàng không, lý do hoàn tiền, và thời gian từ ngày gửi yêu cầu hoàn tiền đến ngày khởi hành dự kiến.</li>
+
+</ul>
+Để được hướng dẫn cụ thể cách hoàn tiền, vui lòng xem trang thông tin Quy trình hoàn tiền. Nếu bạn gặp khó khăn khi gửi yêu cầu hoàn tiền, vui lòng Liên hệ chúng tôi.
+Bài viết liên quan:</br>
+Kiểm tra tình trạng hoàn tiền</br>
+</div>
+<style>
+    body {
+        
+        background-image: url("../img/map.jpg");
+        background-size:100%;
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        color: black;
+        margin: 0;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+        font-weight: bold;
+        margin: 20px 0;
+    }
+
+    h3 {
+        font-size: 20px;
+        font-weight: bold;
+        margin: 10px 0;
+    }
+
+    h5 {
+        font-size: 16px;
+        margin: 10px 0;
+    }
+
+    ul {
+        margin: 10px 0;
+        padding-left: 20px;
+    }
+
+    li {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    ul li {
+        list-style-type: disc;
+    }
+
+    ul ul li {
+        list-style-type: circle;
+    }
+    .new1{
+        width: 900px;
+        text-align: left;
+    }
+</style>

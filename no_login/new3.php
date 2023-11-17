@@ -26,16 +26,17 @@
         <div class="sp">
                 <a href="chocuatoi.php">Đặt chỗ của tôi</a>
         </div>
-        <div class="sp">
+        <div class="sp1">
                 <a href="../client/login.php">Đăng nhập</a>
         </div>
-        <div class="sp">
+        <div class="sp2">
                 <a href="../client/register.php">Đăng kí</a>
         </div>
     </div>
 </div>
 </body>
 </html>
+<div class="new1">
 <h3>Cách huỷ vé và hoàn tiền cho đặt chỗ máy bay </h3>
 <h5>
 Trước khi huỷ đặt chỗ, vui lòng kiểm tra đặt chỗ của bạn có được hoàn tiền hay không. Chỉ cần vào vé điện tử của bạn, chọn nút Hoàn tiền, và chọn Chính sách.
@@ -57,3 +58,55 @@ Trước khi huỷ đặt chỗ, vui lòng kiểm tra đặt chỗ của bạn c
 Để được hướng dẫn cụ thể cách hoàn tiền, vui lòng xem trang thông tin Quy trình hoàn tiền. Nếu bạn gặp khó khăn khi gửi yêu cầu hoàn tiền, vui lòng Liên hệ chúng tôi.
 Bài viết liên quan:</br>
 Kiểm tra tình trạng hoàn tiền</br>
+</div>
+<style>
+    body {
+        
+        background-image: url("../img/map.jpg");
+        background-size:100%;
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        color: black;
+        margin: 0;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+        font-weight: bold;
+        margin: 20px 0;
+    }
+
+    h3 {
+        font-size: 20px;
+        font-weight: bold;
+        margin: 10px 0;
+    }
+
+    h5 {
+        font-size: 16px;
+        margin: 10px 0;
+    }
+
+    ul {
+        margin: 10px 0;
+        padding-left: 20px;
+    }
+
+    li {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    ul li {
+        list-style-type: disc;
+    }
+
+    ul ul li {
+        list-style-type: circle;
+    }
+    .new1{
+        width: 900px;
+        text-align: left;
+    }
+</style>

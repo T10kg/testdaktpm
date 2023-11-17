@@ -26,16 +26,17 @@
         <div class="sp">
                 <a href="chocuatoi.php">Đặt chỗ của tôi</a>
         </div>
-        <div class="sp">
+        <div class="sp1">
                 <a href="../client/login.php">Đăng nhập</a>
         </div>
-        <div class="sp">
+        <div class="sp2">
                 <a href="../client/register.php">Đăng kí</a>
         </div>
     </div>
 </div>
 </body>
 </html>
+<div class="new1">
 <h3>Xác nhận và xác thực thanh toán </h3>
 Thanh toán của bạn được xác nhận khi bạn nhận được vé điện tử qua email.</br>
 Nếu bạn chưa nhận được vé điện tử trong vòng 60 phút sau khi hoàn tất thanh toán, vui lòng tải lên bằng chứng thanh toán theo các bước sau:</br>
@@ -46,4 +47,55 @@ Nếu bạn chưa nhận được vé điện tử trong vòng 60 phút sau khi 
 </ul>
 Thanh toán của bạn sẽ được xác nhận trong khoảng 15 phút sau khi tải lên bằng chứng thanh toán. Nếu thanh toán bằng thẻ tín dụng, vui lòng đảm bảo bạn đã điền đúng mật khẩu dùng một lần (OTP). Nếu thanh toán bằng chuyển khoản, vui lòng đảm bảo bạn đã điền đúng số tài khoản và số tiền. </br>
 Nếu bạn bị mất bằng chứng thanh toán, vui lòng xem bài viết này.</br>
-Nếu thanh toán của bạn vẫn chưa được xác thực sau khi bạn tải lên bằng chứng thanh toán 60 phút, bạn thanh toán sai số tiền, hoặc bạn thanh toán sau thời gian quy định, vui lòng kiểm tra email của bạn, bao gồm hộp thư rác. Nếu bạn cần hỗ trợ thêm, vui lòng Liên hệ chúng tôi.</br>
+Nếu thanh toán của bạn vẫn chưa được xác thực sau khi bạn tải lên bằng chứng thanh toán 60 phút, bạn thanh toán sai số tiền, hoặc bạn thanh toán sau thời gian quy định, vui lòng kiểm tra email của bạn, bao gồm hộp thư rác. Nếu bạn cần hỗ trợ thêm, vui lòng Liên hệ chúng tôi.</br></div>
+<style>
+    body {
+        
+        background-image: url("../img/map.jpg");
+        background-size:100%;
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        color: black;
+        margin: 0;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+        font-weight: bold;
+        margin: 20px 0;
+    }
+
+    h3 {
+        font-size: 20px;
+        font-weight: bold;
+        margin: 10px 0;
+    }
+
+    h5 {
+        font-size: 16px;
+        margin: 10px 0;
+    }
+
+    ul {
+        margin: 10px 0;
+        padding-left: 20px;
+    }
+
+    li {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    ul li {
+        list-style-type: disc;
+    }
+
+    ul ul li {
+        list-style-type: circle;
+    }
+    .new1{
+        width: 900px;
+        text-align: left;
+    }
+</style>
