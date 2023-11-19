@@ -33,7 +33,6 @@
         </div>
     </div>
 </div>
-<h2>Vui lòng nhập thông tin</h2>
 <form method="post">
     <?php
     session_start();
@@ -42,6 +41,7 @@
 
     $passengerCount = $_SESSION['passengerCount']; 
     for ($i = 0; $i < $passengerCount; $i++) {
+        echo "<h2>Vui lòng nhập thông tin:</h2>";
         ?>
         <label> PASSPORT</label> <input type="text" name="passport[]">
         <label> Họ </label> <input type="text" name="ho[]">
@@ -56,8 +56,8 @@
     }
     ?>
     <input type="submit" value="Tiếp tục" name="submit">
-</form>
 
+</form>
 <?php
 if (isset($_POST['submit'])) {
     $found = 0;
@@ -88,7 +88,7 @@ if (isset($_POST['submit'])) {
     if ($result == 1 || $found == 0) {
         $_SESSION['passport'] = $passport;
         header("Location: loaive.php"); // Điều hướng đến trang loaive.php
-        exit(); // Dừng thực thi mã sau khi điều hướng
+
     }
 }
 ?>
@@ -127,4 +127,6 @@ if (isset($_POST['submit'])) {
     input[type="submit"]:hover {
         background-color: #45a049;
     }
+    
+    
 </style>

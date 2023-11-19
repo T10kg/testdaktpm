@@ -76,9 +76,10 @@ if (isset($_POST['submit'])) {
     for ($i = 1; $i <= $passengerCount; $i++) {
         $passport = $_POST['passport' . $i];
         $_SESSION['passport']=$passport;
-        $ticket_code = rand(100000000, 999999999);
-        $_SESSION['TICKET_NUMBER']=$ticket_code; // Tạo mã vé ngẫu nhiên
+        $ticket_code = rand(1000000, 9999999);
+        $_SESSION['TICKET_NUMBER'] = []; // Tạo một mảng trống để lưu trữ các mã vé
         $_SESSION['TICKET_NUMBER'][$i] = $ticket_code;
+        echo $ticket_code;
         $codeInt = (int)$ticket_code;
 
         $ticket_sql = "INSERT INTO ticket (`TICKET_NUMBER`, `DATE_OF_BOOKING`, `DATE_OF_TRAVEL`, `CLASS`, `DATE_OF_CANCELLATION`, `PASSPORTNO`,`FLIGHT_CODE`) VALUES ('$codeInt','" . $_SESSION['date'] . "','$departure_date', '$class','NULL','$passport','" . $_SESSION['flight_code'] . "')";
