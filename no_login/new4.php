@@ -26,16 +26,17 @@
         <div class="sp">
                 <a href="chocuatoi.php">Đặt chỗ của tôi</a>
         </div>
-        <div class="sp">
+        <div class="sp1">
                 <a href="../client/login.php">Đăng nhập</a>
         </div>
-        <div class="sp">
+        <div class="sp2">
                 <a href="../client/register.php">Đăng kí</a>
         </div>
     </div>
 </div>
 </body>
 </html>
+<div class="new1">
 <h3>Cách sửa hoặc đổi tên hành khách bay </h3>
 Bạn vui lòng kiểm tra chính sách của các hãng hàng không bên dưới trước khi điền thông tin vào biểu mẫu yêu cầu điều chỉnh tên:</br>
 <h3>Vietnam Airlines:</h3>
@@ -98,3 +99,55 @@ Vietravel Airlines hỗ trợ đổi tên tính phí đối với tất cả cá
 <b>Sửa tên</b>
 <li>Thay đổi trong phạm vi 01 ký tự (Vd: LE VAN SI --> LE VAN SY)
 Vietravel Airlines sẽ kiểm tra từng trường hợp và hỗ trợ có thu phí nếu trong phạm vi cho phép theo quy định.</li>
+</div>
+<style>
+    body {
+        
+        background-image: url("../img/map.jpg");
+        background-size:100%;
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        color: black;
+        margin: 0;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+        font-weight: bold;
+        margin: 20px 0;
+    }
+
+    h3 {
+        font-size: 20px;
+        font-weight: bold;
+        margin: 10px 0;
+    }
+
+    h5 {
+        font-size: 16px;
+        margin: 10px 0;
+    }
+
+    ul {
+        margin: 10px 0;
+        padding-left: 20px;
+    }
+
+    li {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    ul li {
+        list-style-type: disc;
+    }
+
+    ul ul li {
+        list-style-type: circle;
+    }
+    .new1{
+        width: 900px;
+        text-align: left;
+    }
+</style>

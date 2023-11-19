@@ -125,6 +125,48 @@ if (isset($_POST['confirm_store1'])) {
 
 }
 ?>
+<style>
+       body{
+        background-image: url("../img/map.jpg");
+        background-size:100%;
+    }
+    h1 {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+input[type="submit"],
+button {
+    padding: 10px 20px;
+    background-color: #3487FF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+input[type="submit"]:hover,
+button:hover {
+    background-color: red;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    max-width: 300px;
+}
+.sp a{
+    margin-top:40px;
+}
+</style>
+
 
 
 

@@ -26,17 +26,17 @@
         <div class="sp">
                 <a href="chocuatoi.php">Đặt chỗ của tôi</a>
         </div>
-        <div class="sp">
+        <div class="sp1">
                 <a href="../client/login.php">Đăng nhập</a>
         </div>
-        <div class="sp">
+        <div class="sp2">
                 <a href="../client/register.php">Đăng kí</a>
         </div>
     </div>
 </div>
 </body>
 <html>
-<<div>
+<div class="ve">
     <form method="post">
         <label>Loại vé:</label>
         <select name="class">
@@ -76,7 +76,8 @@ if (isset($_POST['submit'])) {
     for ($i = 1; $i <= $passengerCount; $i++) {
         $passport = $_POST['passport' . $i];
         $_SESSION['passport']=$passport;
-        $ticket_code = rand(100000000, 999999999); // Tạo mã vé ngẫu nhiên
+        $ticket_code = rand(100000000, 999999999);
+        $_SESSION['TICKET_NUMBER']=$ticket_code; // Tạo mã vé ngẫu nhiên
         $codeInt = (int)$ticket_code;
 
         $ticket_sql = "INSERT INTO ticket (`TICKET_NUMBER`, `DATE_OF_BOOKING`, `DATE_OF_TRAVEL`, `CLASS`, `DATE_OF_CANCELLATION`, `PASSPORTNO`,`FLIGHT_CODE`) VALUES ('$codeInt','" . $_SESSION['date'] . "','$departure_date', '$class','NULL','$passport','" . $_SESSION['flight_code'] . "')";
@@ -92,3 +93,44 @@ if (isset($_POST['submit'])) {
     header("Location: chongoi.php");
 }
 ?>
+<style>
+    body{
+        background-image: url("../img/rst(2).webp");
+        background-size:100%;
+    }
+.ve{
+    margin-right:50%;
+}
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+select,
+input[type="date"],
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #3487FF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: red;
+}
+</style>

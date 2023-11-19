@@ -26,16 +26,17 @@
         <div class="sp">
                 <a href="chocuatoi.php">Đặt chỗ của tôi</a>
         </div>
-        <div class="sp">
+        <div class="sp1">
                 <a href="../client/login.php">Đăng nhập</a>
         </div>
-        <div class="sp">
+        <div class="sp2">
                 <a href="../client/register.php">Đăng kí</a>
         </div>
     </div>
 </div>
 </body>
 </html>
+<div class="new1">
 <h3>Hãng hàng không Bamboo Airways đổi lịch chuyến bay của tôi</h3>
 <h5>
     Chúng tôi rất tiếc vì việc thay đổi lịch trình bay ảnh hưởng đến kế hoạch của bạn. Nếu chuyến bay của bạn bị hãng hàng không đổi lịch, bạn có thể tham khảo các chính sách sau:
@@ -61,4 +62,55 @@ Theo chính sách mới nhất từ hãng hàng không Bamboo Airways, việc đ
     <li>Nếu lý do hoàn vé chưa hợp lệ, Traveloka sẽ căn cứ theo chính sách của hãng bay để cập nhật đúng lý do và gửi đến hãng.</li>
     <li>Kết quả hoàn vé hoàn toàn phụ thuộc vào quyết định từ hãng bay.</li>
     <li>Khi đã xác nhận và đồng ý hoàn, yêu cầu hoàn sẽ không thể huỷ bỏ, thời gian hoàn có thể kéo dài lên đến 90 ngày làm việc (không tính thứ Bảy, Chủ Nhật và ngày lễ) kể từ ngày ghi nhận đủ thông tin.</li>
-</ul>
+</ul></div>
+<style>
+    body {
+        
+        background-image: url("../img/map.jpg");
+        background-size:100%;
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        color: black;
+        margin: 0;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+        font-weight: bold;
+        margin: 20px 0;
+    }
+
+    h3 {
+        font-size: 20px;
+        font-weight: bold;
+        margin: 10px 0;
+    }
+
+    h5 {
+        font-size: 16px;
+        margin: 10px 0;
+    }
+
+    ul {
+        margin: 10px 0;
+        padding-left: 20px;
+    }
+
+    li {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    ul li {
+        list-style-type: disc;
+    }
+
+    ul ul li {
+        list-style-type: circle;
+    }
+    .new1{
+        width: 900px;
+        text-align: left;
+    }
+</style>

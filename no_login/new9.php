@@ -26,16 +26,17 @@
         <div class="sp">
                 <a href="chocuatoi.php">Đặt chỗ của tôi</a>
         </div>
-        <div class="sp">
+        <div class="sp1">
                 <a href="../client/login.php">Đăng nhập</a>
         </div>
-        <div class="sp">
+        <div class="sp2">
                 <a href="../client/register.php">Đăng kí</a>
         </div>
     </div>
 </div>
 </body>
 </html>
+<div class="new1">
 <h3>Lời hứa hoàn lại tiền trên Traveloka</h3>
 Chỉ áp dụng trên một số chuyến bay, Chương trình Lời hứa hoàn tiền của Traveloka về cơ bản là chúng tôi hứa hoàn lại tiền cho bạn đúng lúc trong mọi hoàn cảnh.</br>
 Cho đến nay, chúng tôi hứa hoàn lại cho bạn trong 14 hoặc 30 ngày. Điều này có nghĩa là sau này nếu bạn yêu cầu hoàn tiền cho chuyến bay, bạn sẽ nhận được tiền hoàn lại chậm nhất là 14 hoặc 30 ngày sau ngày gửi yêu cầu hoàn tiền.</p>
@@ -73,4 +74,55 @@ Các hãng hàng không đủ điều kiện áp dụng chương trình Lời h�
 7. China Airlines</br>
 
 8. Eva Air</br>
-</ul>
+</ul></div>
+<style>
+    body {
+        
+        background-image: url("../img/map.jpg");
+        background-size:100%;
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        color: black;
+        margin: 0;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+        font-weight: bold;
+        margin: 20px 0;
+    }
+
+    h3 {
+        font-size: 20px;
+        font-weight: bold;
+        margin: 10px 0;
+    }
+
+    h5 {
+        font-size: 16px;
+        margin: 10px 0;
+    }
+
+    ul {
+        margin: 10px 0;
+        padding-left: 20px;
+    }
+
+    li {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    ul li {
+        list-style-type: disc;
+    }
+
+    ul ul li {
+        list-style-type: circle;
+    }
+    .new1{
+        width: 900px;
+        text-align: left;
+    }
+</style>

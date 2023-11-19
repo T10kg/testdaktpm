@@ -36,34 +36,66 @@
 </div>
 </body>
 </html>
-<h3>Cách đổi lịch vé máy bay của tôi </h3>
-Để đổi lịch chuyến bay, vui lòng làm theo các bước sau:</br>
-1. Đăng nhập vào tài khoản Traveloka, đến phần Đặt chỗ của tôi.</br>
-
-2. Chọn chuyến bay bạn muốn đổi lịch.</br>
-
-3. Đến phần Hoàn tiền & Đổi lịch bay, sau đó chọn Đổi lịch. </br>
-
-4. Tùy theo mỗi hãng hàng không, tính năng Đổi lịch bay sẽ cho phép bạn chọn đổi lịch cho từng chặng bay và từng hành khách.</br>
-
-5. Trước khi đổi lịch, vui lòng đọc kỹ mục Chính sách được thể hiện cụ thể trên từng chuyến bay.</br>
-
-6. Sau đó, chọn Yêu cầu đổi lịch.</br>
-
-7. Chi phí đổi lịch và phương thức thanh toán sẽ được thể hiện để bạn xác nhận yêu cầu.</br>
-8. Chi tiết các bước thực hiện bằng hình ảnh minh họa, bạn cũng có thể tham khảo tại Hướng dẫn Hoàn tiền.
-<ul>Lưu ý:
-    <li>Bạn chỉ có thể đổi thời gian và ngày của chuyến bay. </li>
-    <li>Ngoài phí đổi lịch của hãng hàng không, Traveloka có thể tính thêm phí như sau:</li>
-        <ul>Chặng bay nội địa: Phí bắt đầu từ Rp. 25000 / MYR 5 / SGD 2 / THB 80 / VND 25.500 / PHP 60 / AUD 28 mỗi chặng/hành khách.</ul>
-        <ul>Chặng bay quốc tế: IDR 65.000 / MYR 15 / SGD 6 / THB 150 / VND 85.000 / PHP 180 / AUD 28 mỗi chặng/hành khách.</ul>
-    <li>Nếu đổi lịch thành công, tình trạng của vé điện tử sẽ được thay đổi như sau:</li>
-        <ul>Trên máy tính: Thông báo dưới vé điện tử ban đầu: Chuyến bay này đã được đổi lịch. Vui lòng kiểm tra thông tin đặt chỗ của bạn.</ul>
-        <ul>Trên ứng dụng: Tình trạng của vé điện tử ban đầu sẽ được đổi thành Đổi lịch hoàn tất.</ul>
-    <li>Sau khi phát hành, vé điện tử mới của bạn sẽ được gửi đến địa chỉ email bạn đã sử dụng khi đặt chỗ.</li>
-    <li>Đổi lịch tuỳ vào tình trạng ghế trống của chuyến bay.</li>
-    <li>Mỗi hãng hàng không có giới hạn thời gian đổi lịch khác nhau. Để tìm hiểu chính sách của từng hãng, vui lòng đến trang Điều khoản & Điều kiện, sau đó chọn chuyến bay tương ứng.</li>
-    
+<div class="new1">
+<h3>Xác nhận và xác thực thanh toán </h3>
+Thanh toán của bạn được xác nhận khi bạn nhận được vé điện tử qua email.</br>
+Nếu bạn chưa nhận được vé điện tử trong vòng 60 phút sau khi hoàn tất thanh toán, vui lòng tải lên bằng chứng thanh toán theo các bước sau:</br>
+<ul>
+1. Đến tài khoản của bạn trong trang chủ Traveloka ở góc trên bên phải, sau đó chọn phần Danh sách giao dịch.</br>
+2. Chọn đặt chỗ bạn vừa thanh toán và nhấp chuột vào nút Tiếp tục thanh toán. Kéo xuống phần Bạn đã hoàn tất thanh toán? và chọn nút Tôi đã hoàn tất thanh toán.</br>
+3. Nhấp chuột vào nút Tải lên bằng chứng thanh toán. Chọn tệp bạn muốn tải lên, và nhấp chọn Mở. Bạn sẽ thấy tình trạng thanh toán được cập nhật trong Đặt chỗ của tôi</br>
 </ul>
-Nếu bạn gặp khó khăn khi gửi yêu cầu đổi lịch, vui lòng Liên hệ chúng tôi hoặc liên hệ hãng hàng không.
-</div>
+Thanh toán của bạn sẽ được xác nhận trong khoảng 15 phút sau khi tải lên bằng chứng thanh toán. Nếu thanh toán bằng thẻ tín dụng, vui lòng đảm bảo bạn đã điền đúng mật khẩu dùng một lần (OTP). Nếu thanh toán bằng chuyển khoản, vui lòng đảm bảo bạn đã điền đúng số tài khoản và số tiền. </br>
+Nếu bạn bị mất bằng chứng thanh toán, vui lòng xem bài viết này.</br>
+Nếu thanh toán của bạn vẫn chưa được xác thực sau khi bạn tải lên bằng chứng thanh toán 60 phút, bạn thanh toán sai số tiền, hoặc bạn thanh toán sau thời gian quy định, vui lòng kiểm tra email của bạn, bao gồm hộp thư rác. Nếu bạn cần hỗ trợ thêm, vui lòng Liên hệ chúng tôi.</br></div>
+<style>
+    body {
+        
+        background-image: url("../img/map.jpg");
+        background-size:100%;
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        color: black;
+        margin: 0;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+        font-weight: bold;
+        margin: 20px 0;
+    }
+
+    h3 {
+        font-size: 20px;
+        font-weight: bold;
+        margin: 10px 0;
+    }
+
+    h5 {
+        font-size: 16px;
+        margin: 10px 0;
+    }
+
+    ul {
+        margin: 10px 0;
+        padding-left: 20px;
+    }
+
+    li {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    ul li {
+        list-style-type: disc;
+    }
+
+    ul ul li {
+        list-style-type: circle;
+    }
+    .new1{
+        width: 900px;
+        text-align: left;
+    }
+</style>

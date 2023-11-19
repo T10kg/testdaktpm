@@ -36,65 +36,86 @@
 </div>
 </body>
 </html>
-<h3>Cách sửa hoặc đổi tên hành khách bay </h3>
-Bạn vui lòng kiểm tra chính sách của các hãng hàng không bên dưới trước khi điền thông tin vào biểu mẫu yêu cầu điều chỉnh tên:</br>
-<h3>Vietnam Airlines:</h3>
-<h5>Thay đổi tên hành khách</h5>
-Vietnam Airlines chưa hỗ trợ thay đổi tên hành khách đối với tất cả hạng vé</br>
-<b>Sửa tên</b>
-<ul>
-    <li>Dư/ Thiếu phần tên đệm: VĂN hoặc THỊ (Vd: LE SY--> LE VAN SY)</li>
-    <li>Thay đổi trong phạm vi 01 ký tự (Vd: LE VAN SI --> LE VAN SY)</li>
-    <li>Lỗi giới tính hay tước hiệu: Vd TRAN/THANH VAN MR => TRAN/THANH VAN MS</li>
-    <li>Thay đổi tên được chính phủ nước sở tại công nhận bằng văn bản</li>
-    <li>Lỗi do viết tắt: (vd: JEAN/P MR => JEAN/PIERE MR)</li>
-    <li>Thay đổi trật tự tên nhưng không thêm bớt ký tự:</li>
-Tên sai : Họ: SY; Tên đệm và Tên: LE VAN</br>
-Tên đúng : Họ: LE; Tên đệm và Tên: VAN SY</br>
-Vietnam Airlines sẽ kiểm tra từng trường hợp và hỗ trợ có thu phí nếu trong phạm vi cho phép theo quy định.</br>
+<div class="new1">
+<h3>Cách đổi lịch vé máy bay của tôi </h3>
+Để đổi lịch chuyến bay, vui lòng làm theo các bước sau:</br>
+1. Đăng nhập vào tài khoản Traveloka, đến phần Đặt chỗ của tôi.</br>
+
+2. Chọn chuyến bay bạn muốn đổi lịch.</br>
+
+3. Đến phần Hoàn tiền & Đổi lịch bay, sau đó chọn Đổi lịch. </br>
+
+4. Tùy theo mỗi hãng hàng không, tính năng Đổi lịch bay sẽ cho phép bạn chọn đổi lịch cho từng chặng bay và từng hành khách.</br>
+
+5. Trước khi đổi lịch, vui lòng đọc kỹ mục Chính sách được thể hiện cụ thể trên từng chuyến bay.</br>
+
+6. Sau đó, chọn Yêu cầu đổi lịch.</br>
+
+7. Chi phí đổi lịch và phương thức thanh toán sẽ được thể hiện để bạn xác nhận yêu cầu.</br>
+8. Chi tiết các bước thực hiện bằng hình ảnh minh họa, bạn cũng có thể tham khảo tại Hướng dẫn Hoàn tiền.
+<ul>Lưu ý:
+    <li>Bạn chỉ có thể đổi thời gian và ngày của chuyến bay. </li>
+    <li>Ngoài phí đổi lịch của hãng hàng không, Traveloka có thể tính thêm phí như sau:</li>
+        <ul>Chặng bay nội địa: Phí bắt đầu từ Rp. 25000 / MYR 5 / SGD 2 / THB 80 / VND 25.500 / PHP 60 / AUD 28 mỗi chặng/hành khách.</ul>
+        <ul>Chặng bay quốc tế: IDR 65.000 / MYR 15 / SGD 6 / THB 150 / VND 85.000 / PHP 180 / AUD 28 mỗi chặng/hành khách.</ul>
+    <li>Nếu đổi lịch thành công, tình trạng của vé điện tử sẽ được thay đổi như sau:</li>
+        <ul>Trên máy tính: Thông báo dưới vé điện tử ban đầu: Chuyến bay này đã được đổi lịch. Vui lòng kiểm tra thông tin đặt chỗ của bạn.</ul>
+        <ul>Trên ứng dụng: Tình trạng của vé điện tử ban đầu sẽ được đổi thành Đổi lịch hoàn tất.</ul>
+    <li>Sau khi phát hành, vé điện tử mới của bạn sẽ được gửi đến địa chỉ email bạn đã sử dụng khi đặt chỗ.</li>
+    <li>Đổi lịch tuỳ vào tình trạng ghế trống của chuyến bay.</li>
+    <li>Mỗi hãng hàng không có giới hạn thời gian đổi lịch khác nhau. Để tìm hiểu chính sách của từng hãng, vui lòng đến trang Điều khoản & Điều kiện, sau đó chọn chuyến bay tương ứng.</li>
+    
 </ul>
-<h3>Vietjet Air:</h3>
-<h5>Thay đổi tên hành khách</h5>
-Vietjet Air chưa hỗ trợ thay đổi tên hành khách đối với tất cả hạng vé, ngoại trừ hạng vé gốc ban đầu là Skyboss (hạng vé cao cấp nhất) và có áp dụng thu phí - không áp dụng cho vé nâng hạng.</br>
-Trong trường hợp vé Skyboss được phép đổi tên, phí đổi tham khảo như sau:
-<ul>
-    <li>Nội địa: 385.000VND/ khách + chênh lệch giá vé/khách/chặng (nếu có)</li>
-    <li>Quốc tế ngoại trừ hành trình đi Úc: 800.000VND/ khách + chênh lệch giá vé/khách/chặng (nếu có)</li>
-    <li>Quốc tế hành trình giữa Việt Nam và Úc: 2.000.000VND/ khách + chênh lệch giá vé/khách/chặng (nếu có)</li>
-</ul>
-<b>Sửa tên</b>
-<ul>
-    <li>Thay đổi trong phạm vi 02 ký tự (Vd: LE VAN SI --> LE VAN SY)</li>
-    <li>Thay đổi trật tự tên nhưng không thêm bớt ký tự :</li>
-</ul>
-Tên sai : Họ: SY; Tên đệm và Tên: LE VAN</br>
-Tên đúng : Họ: LE; Tên đệm và Tên: VAN SY</br>
-Vietjet Air sẽ kiểm tra từng trường hợp và hỗ trợ có thu phí nếu trong phạm vi cho phép theo quy định</br>
-<h3>Bamboo Airways:</h3>
-<h5>Thay đổi tên hành khách</h5>
-    <li>
-    Bamboo Airways chưa hỗ trợ thay đổi tên hành khách đối với tất cả hạng vé kể từ ngày 26/09/2023
-    </li>
-<b>Sửa tên</b>
-<ul>
-    <li>Thay đổi trong phạm vi 02 ký tự (Vd: LE VAN SI --> LE VAN SY)</li>
-    <li>Thay đổi trật tự tên nhưng không thêm bớt ký tự :</li>
-</ul>
-Tên sai : Họ: SY; Tên đệm và Tên: LE VAN</br>
-Tên đúng : Họ: LE; Tên đệm và Tên: VAN SY</br>
-<ul>
-    <li>Dư/ Thiếu phần tên đệm: VĂN hoặc THỊ (Vd: LE SY--> LE VAN SY)</li>
-    <li>Lỗi phát âm vùng miền</li>
-</ul>
-Bamboo Airways sẽ kiểm tra từng trường hợp và hỗ trợ có thu phí nếu trong phạm vi cho phép theo quy định.</br>
-Bamboo Airways sẽ kiểm tra từng trường hợp và hỗ trợ có thu phí nếu trong phạm vi cho phép theo quy định.</br>
-<h3>Vietravel Airlines:</h3>
-<h5>Thay đổi tên hành khách</h5>
-Vietravel Airlines hỗ trợ đổi tên tính phí đối với tất cả các hạng vé, phí đổi tham khảo như sau:
-<ul>
-    <li>Nội địa: 385.000VND/ khách + chênh lệch giá vé (nếu có)</li>
-    <li>Quốc tế: 800.000VND/ khách + chênh lệch giá vé (nếu có)</li>
-</ul>
-<b>Sửa tên</b>
-<li>Thay đổi trong phạm vi 01 ký tự (Vd: LE VAN SI --> LE VAN SY)
-Vietravel Airlines sẽ kiểm tra từng trường hợp và hỗ trợ có thu phí nếu trong phạm vi cho phép theo quy định.</li>
+Nếu bạn gặp khó khăn khi gửi yêu cầu đổi lịch, vui lòng Liên hệ chúng tôi hoặc liên hệ hãng hàng không.
+</div>
+<style>
+    body {
+        
+        background-image: url("../img/map.jpg");
+        background-size:100%;
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        color: black;
+        margin: 0;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+        font-weight: bold;
+        margin: 20px 0;
+    }
+
+    h3 {
+        font-size: 20px;
+        font-weight: bold;
+        margin: 10px 0;
+    }
+
+    h5 {
+        font-size: 16px;
+        margin: 10px 0;
+    }
+
+    ul {
+        margin: 10px 0;
+        padding-left: 20px;
+    }
+
+    li {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    ul li {
+        list-style-type: disc;
+    }
+
+    ul ul li {
+        list-style-type: circle;
+    }
+    .new1{
+        width: 900px;
+        text-align: left;
+    }
+</style>

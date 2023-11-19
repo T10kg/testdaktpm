@@ -25,17 +25,17 @@
         <div class="sp">
                 <a href="chocuatoi.php">Đặt chỗ của tôi</a>
         </div>
-        <div class="sp">
+        <div class="sp1">
                 <a href="../client/login.php">Đăng nhập</a>
         </div>
-        <div class="sp">
+        <div class="sp2">
                 <a href="../client/register.php">Đăng kí</a>
         </div>
     </div>
 </div>
 </body>
 <html>
-<div>
+<div class="thongtin">
 <?php
 require("../conn.php");
 require("../client/func.php");
@@ -59,3 +59,25 @@ if (mysqli_num_rows($result) > 0) {
 }
 ?>
 </div>
+<style>
+    body{
+        background-image: url("../img/map.jpg");
+        background-size:100%;
+    }
+    .thongtin {
+    width: 500px;
+    margin-top:50px;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+}
+
+.thongtin p {
+    margin-bottom: 10px;
+}
+
+.thongtin p:last-child {
+    margin-bottom: 0;
+}
+</style>

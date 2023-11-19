@@ -26,16 +26,17 @@
         <div class="sp">
                 <a href="chocuatoi.php">Đặt chỗ của tôi</a>
         </div>
-        <div class="sp">
+        <div class="sp1">
                 <a href="../client/login.php">Đăng nhập</a>
         </div>
-        <div class="sp">
+        <div class="sp2">
                 <a href="../client/register.php">Đăng kí</a>
         </div>
     </div>
 </div>
 </body>
 </html>
+<div class="new1">
 <h3>Cách làm thủ tục trực tuyến </h3>
 Tính năng check-in trực tuyến giúp bạn check-in trước khi đến sân bay. Bạn có thể làm như vậy thông qua ứng dụng hoặc trang web Traveloka hoặc làm theo các bước đơn giản sau:
 <ul>
@@ -47,4 +48,55 @@ Tính năng check-in trực tuyến giúp bạn check-in trước khi đến sâ
 </ul>
 Vui lòng lưu ý rằng bạn phải mang bản in thẻ lên máy bay đến cửa khởi hành. Nếu không thể tự in, bạn có thể in thẻ lên máy bay tại quầy làm thủ tục.</br>
 Lưu ý: Với người dùng chọn quốc gia là Indonesia, bạn có thể thấy phần Làm thủ tục trực tuyến trong trang chủ ứng dụng Traveloka. Nếu không thể tìm thấy, vui lòng đảm bảo bạn đã đăng nhập vào tài khoản Traveloka của mình.</br>
-Vui lòng kiểm tra hãng hàng không của bạn có hỗ trợ làm thủ tục trực tuyến. Đến trang Làm thủ tục rực tuyến để xem danh sách hãng hàng không có hỗ trợ.
+Vui lòng kiểm tra hãng hàng không của bạn có hỗ trợ làm thủ tục trực tuyến. Đến trang Làm thủ tục rực tuyến để xem danh sách hãng hàng không có hỗ trợ.</div>
+<style>
+    body {
+        
+        background-image: url("../img/map.jpg");
+        background-size:100%;
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        color: black;
+        margin: 0;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+        font-weight: bold;
+        margin: 20px 0;
+    }
+
+    h3 {
+        font-size: 20px;
+        font-weight: bold;
+        margin: 10px 0;
+    }
+
+    h5 {
+        font-size: 16px;
+        margin: 10px 0;
+    }
+
+    ul {
+        margin: 10px 0;
+        padding-left: 20px;
+    }
+
+    li {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    ul li {
+        list-style-type: disc;
+    }
+
+    ul ul li {
+        list-style-type: circle;
+    }
+    .new1{
+        width: 900px;
+        text-align: left;
+    }
+</style>

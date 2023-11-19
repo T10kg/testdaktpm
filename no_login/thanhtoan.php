@@ -26,10 +26,10 @@
         <div class="sp">
                 <a href="chocuatoi.php">Đặt chỗ của tôi</a>
         </div>
-        <div class="sp">
+        <div class="sp1">
                 <a href="../client/login.php">Đăng nhập</a>
         </div>
-        <div class="sp">
+        <div class="sp2">
                 <a href="../client/register.php">Đăng kí</a>
         </div>
     </div>
@@ -109,5 +109,42 @@ if (isset($_POST['confirm_store1'])) {
 }
 ?>
 
+<style>
+    body{
+        background-image: url("../img/map.jpg");
+        background-size:100%;
+    }
+    h1 {
+    text-align: center;
+}
 
+form {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+input[type="submit"],
+button {
+    padding: 10px 20px;
+    background-color: #3487FF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+input[type="submit"]:hover,
+button:hover {
+    background-color: red;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    max-width: 300px;
+}
+</style>
 

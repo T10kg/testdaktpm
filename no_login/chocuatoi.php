@@ -26,16 +26,17 @@
         <div class="sp">
                 <a href="chocuatoi.php">Đặt chỗ của tôi</a>
         </div>
-        <div class="sp">
+        <div class="sp1">
                 <a href="../client/login.php">Đăng nhập</a>
         </div>
-        <div class="sp">
+        <div class="sp2">
                 <a href="../client/register.php">Đăng kí</a>
         </div>
     </div>
 </div>
 </body>
-<html>
+</html>
+<div class="nen">
 <h2 >Tìm kiếm thông tin chuyến bay</h2>
 <form method="post">
     <label for="searchTerm"> số hộ chiếu:</label>
@@ -56,10 +57,10 @@ if (isset($_POST['submit'])) {
     $stmt->bind_param("s", $searchTerm);
     $stmt->execute();
     $result = $stmt->get_result();
-
     if ($result->num_rows > 0) {
         // Hiển thị thông tin chuyến bay
         while ($row = $result->fetch_assoc()) {
+            echo '<div class=flight-infor" >';
             echo "ngày mua: " . $row["DATE_OF_BOOKING"] . "<br>";
             echo "ngày đi: " . $row["DATE_OF_TRAVEL"] . "<br>";
             echo "Hạng: " . $row["CLASS"] . "<br>";
@@ -70,6 +71,7 @@ if (isset($_POST['submit'])) {
             echo '<input type="hidden" name="ticketNumber" value="' . $row["TICKET_NUMBER"] . '">';
             echo '<input type="submit" value="Hủy vé" name="huy">';
             echo '</form>';
+            echo '</div >';
             exit();
                 }
         }
@@ -77,4 +79,48 @@ if (isset($_POST['submit'])) {
         echo "Không tìm thấy thông tin chuyến bay.";
     }
 ?>
+</div>
+<style>
+body{
+    background-image: url("../img/map.jpg");
+    background-size:100%;
+    }
+    h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+form {
+    width: 300px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    background-color:#3487FF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: red;
+}
+</style>
 

@@ -26,15 +26,17 @@
         <div class="sp">
                 <a href="chocuatoi.php">Đặt chỗ của tôi</a>
         </div>
-        <div class="sp">
+        <div class="sp1">
                 <a href="../client/login.php">Đăng nhập</a>
         </div>
-        <div class="sp">
+        <div class="sp2">
                 <a href="../client/register.php">Đăng kí</a>
         </div>
+    </div>
 </div>
 </body>
 </html>
+<div class="new1">
 <h3>Cách yêu cầu xuất hóa đơn GTGT khi đặt vé máy bay tại Việt Nam </h3>
 Để yêu cầu xuất hóa đơn GTGT, vui lòng thực hiện theo các bước dưới đây.
 <ul>
@@ -48,5 +50,56 @@ Nhưng trước khi bạn tiếp tục, vui lòng lưu ý những điều sau:
     <li>Theo các quy định hiện hành về thuế tại Việt Nam (Điều 2, Khoản 4, Thông tư số 78/2014/TT-BTC và Công văn số 513/CT-TTHT ngày 16/01/2017), vé máy bay điện tử và thẻ lên máy bay là các chứng từ đầy đủ để công ty bạn được trừ vào chi phí tại Việt Nam.</li>
 </ul>
 Thời hạn yêu cầu xuất hóa đơn là ngày 05 của tháng tiếp theo sau tháng thanh toán. Quy định này có nghĩa là bất kể thời điểm thanh toán được thực hiện trong tháng trước, hóa đơn phải được yêu cầu trước ngày 05 của tháng tiếp theo. Xin lưu ý rằng chúng tôi không thể chấp nhận yêu cầu hóa đơn cho tháng thanh toán trước đó sau thời hạn này.
+</div>
+<style>
+    body {
+        
+        background-image: url("../img/map.jpg");
+        background-size:100%;
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        color: black;
+        margin: 0;
+        padding: 20px;
+    }
 
+    h1 {
+        font-size: 24px;
+        font-weight: bold;
+        margin: 20px 0;
+    }
+
+    h3 {
+        font-size: 20px;
+        font-weight: bold;
+        margin: 10px 0;
+    }
+
+    h5 {
+        font-size: 16px;
+        margin: 10px 0;
+    }
+
+    ul {
+        margin: 10px 0;
+        padding-left: 20px;
+    }
+
+    li {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    ul li {
+        list-style-type: disc;
+    }
+
+    ul ul li {
+        list-style-type: circle;
+    }
+    .new1{
+        width: 900px;
+        text-align: left;
+    }
+</style>
 

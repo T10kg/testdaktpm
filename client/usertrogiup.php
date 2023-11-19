@@ -64,3 +64,37 @@ if (isset($_POST['logout'])) {
     <div><a href="usernew8.php">Làm cách nào để kiểm tra trạng thái hoàn tiền của tôi</a></div>
     <div><a href="usernew9.php">Lời hứa hoàn lại tiền trên Traveloka </a></div>
 </div>
+<style>
+body{
+        background-image: url("../img/map.jpg");
+        background-size:100%;
+}
+.help {
+    box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.2);
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 9px;
+    border-radius: 5px;
+}
+.help div{
+        margin-top: 20px;
+        margin-bottom: 20px;
+}
+.help a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.help a:hover {
+    color: black;
+}
+.help div {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid gray;
+}
+
+</style>

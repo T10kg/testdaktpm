@@ -25,10 +25,10 @@
         <div class="sp">
             <a href="chocuatoi.php">Đặt chỗ của tôi</a>
         </div>
-        <div class="sp">
+        <div class="sp1">
             <a href="../client/login.php">Đăng nhập</a>
         </div>
-        <div class="sp">
+        <div class="sp2">
             <a href="../client/register.php">Đăng kí</a>
         </div>
     </div>
@@ -95,3 +95,36 @@ if (isset($_POST['submit'])) {
 
 </body>
 </html>
+<style>
+    body{
+        background-image: url("../img/rst(2).webp");
+        background-size:100%;
+    }
+    form {
+        width: 400px;
+        margin: 0 auto;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    input[type="text"] {
+        width: 100%;
+        padding: 5px;
+        margin-bottom: 10px;
+    }
+
+    input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+</style>

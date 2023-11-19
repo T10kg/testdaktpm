@@ -118,15 +118,15 @@ if (isset($_POST['logout'])) {
                 <h3>Sài Gòn</h3>
                 </div>
                 <div class="imggg" >
-                <?php require("../no_login/hanoi.php") ?>
+                <?php require("userhanoi.php") ?>
                 <h3>Hà Nội</h3>
                 </div>
                 <div class="imggg" >
-                <?php require("../no_login/cantho.php") ?>
+                <?php require("usercantho.php") ?>
                 <h3>Cần Thơ</h3>
                 </div>
 </div>
 
 <div >
-        <?php require("../test.php") ?>
+        <?php require("userend.php") ?>
             </div>

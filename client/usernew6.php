@@ -36,41 +36,70 @@
 </div>
 </body>
 </html>
-<h3>Lời hứa hoàn lại tiền trên Traveloka</h3>
-Chỉ áp dụng trên một số chuyến bay, Chương trình Lời hứa hoàn tiền của Traveloka về cơ bản là chúng tôi hứa hoàn lại tiền cho bạn đúng lúc trong mọi hoàn cảnh.</br>
-Cho đến nay, chúng tôi hứa hoàn lại cho bạn trong 14 hoặc 30 ngày. Điều này có nghĩa là sau này nếu bạn yêu cầu hoàn tiền cho chuyến bay, bạn sẽ nhận được tiền hoàn lại chậm nhất là 14 hoặc 30 ngày sau ngày gửi yêu cầu hoàn tiền.</p>
-Do đó, bạn không cần phải lo lắng về việc hoàn tiền của mình bị chậm trễ với chương trình lời hứa hoàn tiền của Traveloka. Bởi vì ngay cả khi hãng hàng không cần thêm thời gian để xử lý việc hoàn tiền của bạn, chúng tôi sẽ bao trả khoản tiền hoàn lại của bạn và gửi tiền trước cho bạn.</p>
-Nếu bạn quan tâm đến việc đặt vé máy bay có áp dụng chương trình Lời hứa hoàn tiền của Traveloka, hãy xem danh sách bên dưới để biết các hãng hàng không đủ điều kiện.</br>
-Các hãng hàng không đủ điều kiện áp dụng chương trình Lời hứa hoàn tiền 14-Ngày</br>
+<div class="new1">
+<h3>Cách yêu cầu xuất hóa đơn GTGT khi đặt vé máy bay tại Việt Nam </h3>
+Để yêu cầu xuất hóa đơn GTGT, vui lòng thực hiện theo các bước dưới đây.
 <ul>
-1. Lion Air</br>
-2. Batik Air </br>
-
-3. Wings Air</br>
-
-4. Citilink</br>
-
-5. Super Air Jet</br>
-
-6. Trigana Air</br>
-
-7. Susi Air
+        1.Truy cập com trên thiết bị máy tính để bàn và nhấp vào menu Đặt chỗ của tôi nằm ở đầu trang.</br>
+        2.Nhấp vào chuyến bay bạn muốn yêu cầu xuất hóa đơn thuế.</br>
+        3.Nhấp vào Yêu cầu Phiếu thu/Hóa đơn VAT dưới mục Chi tiết chuyến bay.</br>
 </ul>
-Các hãng hàng không đủ điều kiện áp dụng chương trình Lời hứa hoàn tiền 30-Ngày</br>
+Nhưng trước khi bạn tiếp tục, vui lòng lưu ý những điều sau:
 <ul>
-1. Scoot</br>
-
-2. Singapore </br>
-
-3. Silk Air</br>
-
-4. All Nippon </br>
-
-5. Cathay Pacific</br>
-
-6. Japan Airlines
-</br>
-7. China Airlines</br>
-
-8. Eva Air</br>
+    <li>Trong hầu hết các trường hợp, chúng tôi không thể xuất hóa đơn cho mục đích hoàn thuế tại Việt Nam. Tuy nhiên, chúng tôi sẽ hỗ trợ các yêu cầu về hóa đơn thuế từ các công ty hoạt động bên trong lãnh thổ Việt Nam. Dịch vụ này áp dụng cho các hãng hàng không như VietJet (VJ), Bamboo Airways (QH), Vietravel Airlines (VU) và Vietnam Airlines (VNA).</li>
+    <li>Theo các quy định hiện hành về thuế tại Việt Nam (Điều 2, Khoản 4, Thông tư số 78/2014/TT-BTC và Công văn số 513/CT-TTHT ngày 16/01/2017), vé máy bay điện tử và thẻ lên máy bay là các chứng từ đầy đủ để công ty bạn được trừ vào chi phí tại Việt Nam.</li>
 </ul>
+Thời hạn yêu cầu xuất hóa đơn là ngày 05 của tháng tiếp theo sau tháng thanh toán. Quy định này có nghĩa là bất kể thời điểm thanh toán được thực hiện trong tháng trước, hóa đơn phải được yêu cầu trước ngày 05 của tháng tiếp theo. Xin lưu ý rằng chúng tôi không thể chấp nhận yêu cầu hóa đơn cho tháng thanh toán trước đó sau thời hạn này.
+</div>
+<style>
+    body {
+        
+        background-image: url("../img/map.jpg");
+        background-size:100%;
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        color: black;
+        margin: 0;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+        font-weight: bold;
+        margin: 20px 0;
+    }
+
+    h3 {
+        font-size: 20px;
+        font-weight: bold;
+        margin: 10px 0;
+    }
+
+    h5 {
+        font-size: 16px;
+        margin: 10px 0;
+    }
+
+    ul {
+        margin: 10px 0;
+        padding-left: 20px;
+    }
+
+    li {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    ul li {
+        list-style-type: disc;
+    }
+
+    ul ul li {
+        list-style-type: circle;
+    }
+    .new1{
+        width: 900px;
+        text-align: left;
+    }
+</style>
+
