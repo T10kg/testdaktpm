@@ -1,6 +1,8 @@
 <?php
-require("../conn.php");
-require("../client/func.php");
+   require("../conn.php");
+   require("../client/func.php");
+
+
 
 if(isset($_POST['submit']))
 {
@@ -13,7 +15,27 @@ if(isset($_POST['submit']))
       $temp[] = "";
       $res= da_dat($conn);
       while($c = mysqli_fetch_array($res)){
-         $temp[$c['seat']] = 0;
+         $temp[$c['SEAT']] = 0;
+      }
+}
+?>
+<?php
+
+
+if(isset($_POST['submit']))
+{
+   
+   $seats = $_POST['seat'];
+   $i = 1;
+   foreach ($seats as $s) {
+      $res = them_cho($conn,$s, $_SESSION['TICKET_NUMBER'][$i]);
+      $i++;
+    }
+   
+      $temp[] = "";
+      $res= da_dat($conn);
+      while($c = mysqli_fetch_array($res)){
+         $temp[$c['SEAT']] = 0;
       }
 }
 ?>
@@ -41,8 +63,8 @@ if(isset($_POST['submit']))
      $ress= da_dat($conn);
      $tempp[] = 0;
             while($c = mysqli_fetch_array($ress)){
-               echo $c['seat'];
-               $tempp[trim($c['seat'])] = 0;
+               echo $c['SEAT'];
+               $tempp[trim($c['SEAT'])] = 0;
          }
 
       for($i = 0; $i <= 2; $i++){
@@ -80,18 +102,18 @@ if(isset($_POST['submit']))
   function handleCheckboxChange(checkbox) {
    var nodeList = document.querySelectorAll("input[type='checkbox']");
    var array = [...nodeList];
-    if (checkbox.checked) {
-      i++;
-      if(i == $passengerCount ){
-         array.forEach(function(element) {
-            if(element.checked) {
-            }
-            else element.disabled = true;
-         });
-      }
-      
-    } else {
-      i--;
+      if (checkbox.checked) {
+         i++;
+         if(i == $_SESSION['passengerCount']){
+            array.forEach(function(element) {
+               if(element.checked) {
+               }
+               else element.disabled = true;
+            });
+         }
+      } 
+      else {
+         i--;
          array.forEach(function(element) {
             if(element.checked) {
             }
@@ -100,6 +122,7 @@ if(isset($_POST['submit']))
       
     }
     console.log(i);
-  }
+   
+}
 </script>
 </html>
