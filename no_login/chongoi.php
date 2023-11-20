@@ -1,25 +1,7 @@
 <?php
    require("../conn.php");
    require("../client/func.php");
-
-
-
-if(isset($_POST['submit']))
-{
-   
-   $seats = $_POST['seat'];
-   foreach ($seats as $s) {
-      $res = them_cho($conn,$s);
-    }
-   
-      $temp[] = "";
-      $res= da_dat($conn);
-      while($c = mysqli_fetch_array($res)){
-         $temp[$c['SEAT']] = 0;
-      }
-}
-?>
-<?php
+   session_start();
 
 
 if(isset($_POST['submit']))
@@ -28,8 +10,12 @@ if(isset($_POST['submit']))
    $seats = $_POST['seat'];
    $i = 1;
    foreach ($seats as $s) {
+      echo $s;
+      echo $i;
+      echo $_SESSION['TICKET_NUMBER'][$i];
       $res = them_cho($conn,$s, $_SESSION['TICKET_NUMBER'][$i]);
       $i++;
+      
     }
    
       $temp[] = "";
@@ -54,11 +40,14 @@ if(isset($_POST['submit']))
 <body>
 <div>
 <form action="" method = "POST">
-<table>
+<table  class="seat-layout">
       <?php
-      session_start();
+      
       $passengerCount = $_SESSION['passengerCount'];
-     
+      ?>
+
+      <input type="hidden" id = "passenger_count" value = "<?php  echo  $passengerCount;?>">
+      <?php
      $aa = "";
      $ress= da_dat($conn);
      $tempp[] = 0;
@@ -67,14 +56,18 @@ if(isset($_POST['submit']))
                $tempp[trim($c['SEAT'])] = 0;
          }
 
-      for($i = 0; $i <= 2; $i++){
+      for($i = 0; $i <= 5; $i++){
          if($i == 0) $aa = "A";
          else if($i == 1) $aa = "B";
          else if($i == 2) $aa = "C";
+         else if($i == 3) $aa = "D";
+         else if($i == 4) $aa = "E";
+         else if($i == 5) $aa = "F";
+
       ?>
          <tr>
       <?php
-         for($j = 1; $j <= 10; $j++){
+         for($j = 1; $j <= 15; $j++){
             
             ?>
                <th>
@@ -101,10 +94,11 @@ if(isset($_POST['submit']))
    var i = 0;
   function handleCheckboxChange(checkbox) {
    var nodeList = document.querySelectorAll("input[type='checkbox']");
+   var convert = document.getElementById("passenger_count");
    var array = [...nodeList];
       if (checkbox.checked) {
          i++;
-         if(i == $_SESSION['passengerCount']){
+         if(i == convert.value){
             array.forEach(function(element) {
                if(element.checked) {
                }
@@ -126,3 +120,49 @@ if(isset($_POST['submit']))
 }
 </script>
 </html>
+<style>
+body {
+  font-family: Arial, sans-serif;
+}
+
+.seat-layout {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.seat-layout th {
+  padding: 10px;
+  text-align: center;
+}
+
+.seat-layout td {
+  padding: 5px;
+}
+
+.seat {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-image: url("../img/z4896435291747_e2ebb6c8cdf591aa434c158b7b2cfd7f.jpg");/* Đường dẫn tới hình ảnh cái ghế */
+  background-size: cover;
+  cursor: pointer;
+}
+
+.seat.selected {
+  background-image: url(path/to/selected-seat-image.jpg); /* Đường dẫn tới hình ảnh cái ghế được chọn */
+}
+
+input[type="submit"] {
+  display: block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+</style>

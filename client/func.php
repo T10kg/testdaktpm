@@ -19,7 +19,7 @@
         return mysqli_query($conn, $sql);
     }
     function them_cho($conn, $seat, $ticket_number){
-        $sql = "UPDATE `ticket` SET `seat`='$seat' WHERE `TICKET_NUMBER` = '$ticket_number'";
+        $sql = "UPDATE `ticket` SET `SEAT`='$seat' WHERE `TICKET_NUMBER` = '$ticket_number'";
         return mysqli_query($conn, $sql);
      }
   

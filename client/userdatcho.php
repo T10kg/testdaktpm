@@ -54,24 +54,86 @@ if (isset($_POST['logout'])) {
 </body>
 <html>
 <?php
+session_start();
+$passengerCount = $_SESSION['passengerCount']; 
+echo $passengerCount;
 require("../conn.php");
 require("func.php");
-// Truy vấn database để lấy danh sách các góp ý đã gửi bởi người dùng hiện tại
+if($passengerCount==1){
 $sql = "SELECT * FROM passenger_infor WHERE USERNAME = '{$_SESSION['username']}'";
 $result = mysqli_query($conn, $sql);
-
 // Kiểm tra xem có bản ghi nào được trả về hay không
 if (mysqli_num_rows($result) > 0) {
     // Duyệt qua từng bản ghi và hiển thị thông tin
     while ($row = mysqli_fetch_assoc($result)) {
         echo '<input type="hidden" name="passport" value="' . $row["PASSPORTNO"] . '">';
         $_SESSION['passport']=$row["PASSPORTNO"] ;
-        echo $_SESSION['passport'];
         header("Location: loaive.php");
          // Điều hướng đến trang admin.php
         exit();
     }
-} else {
+ }
+}else if($passengerCount>1){
+
+    for ($i = 1; $i < $passengerCount; $i++) {
+        echo "<h2>Vui lòng nhập thông tin:</h2>";
+        ?>
+        <label> PASSPORT</label> <input type="text" name="passport[]">
+        <label> Họ </label> <input type="text" name="ho[]">
+        <label> tên lót </label> <input type="text" name="tenlot[]">
+        <label> tên </label> <input type="text" name="ten[]">
+        <label>SĐT:</label><input type="text" name="PHONE[]">
+        <label>Địa chỉ:</label><input type="text" name="address[]">
+        <label>Tuổi:</label><input type="text" name="age[]">
+        <label>giới tính:</label><input type="text" name="sex[]">
+        <br><br>
+        <?php
+    }
+    ?>
+    <input type="submit" value="Tiếp tục" name="submit">
+</form>
+<?php
+if (isset($_POST['submit'])) {
+    $found = 0;
+    $passengerCount = count($_POST['passport']);
+
+    // Lặp qua từng form để lưu thông tin hành khách
+    for ($i = 0; $i < $passengerCount; $i++) {
+        $passport = $_POST["passport"][$i];
+
+        // Kiểm tra xem thông tin hành khách đã tồn tại trong cơ sở dữ liệu chưa
+        $sql = "SELECT * FROM passenger_infor WHERE USERNAME = '{$_SESSION['username']}'";
+        $result = mysqli_query($conn, $sql);
+        // Kiểm tra xem có bản ghi nào được trả về hay không
+        if (mysqli_num_rows($result) > 0) {
+            // Duyệt qua từng bản ghi và hiển thị thông tin
+        while ($row = mysqli_fetch_assoc($result)) {
+        echo '<input type="hidden" name="passport" value="' . $row["PASSPORTNO"] . '">';
+        $_SESSION['passport']=$row["PASSPORTNO"] ;
+        if (!mysqli_num_rows(checkthongtin($conn, $passport))){
+            $ho = $_POST["ho"][$i];
+            $tenlot = $_POST["tenlot"][$i];
+            $ten = $_POST["ten"][$i];
+            $SĐT = $_POST["PHONE"][$i];
+            $gioitinh = $_POST["sex"][$i];
+            $tuoi = $_POST["age"][$i];
+            $diachi = $_POST["address"][$i];
+            $SĐTBigInt = (int)$SĐT;
+            $tuoiInt = (int)$tuoi;
+            $sql = "INSERT INTO passenger_infor (`PASSPORTNO`, `FNAME`, `MNAME`, `LNAME`, `ADDRESS`, `PHONE`, `AGE`, `SEX`,`USERNAME`) VALUES('$passport', '$ho', '$tenlot', '$ten','$diachi','$SĐTBigInt','$tuoiInt', '$gioitinh','NULL')";
+            $result = mysqli_query($conn, $sql);
+            $found = 1;
+        }
+    }
+
+    if ($result == 1 || $found == 0) {
+        $_SESSION['passport'] = $passport;
+        header("Location: loaive.php"); // Điều hướng đến trang loaive.php
+
+    }
+  }
+}   
+ else {
     echo "Không có góp ý nào.";
 }
 ?>
