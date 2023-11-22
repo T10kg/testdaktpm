@@ -54,7 +54,6 @@ if (isset($_POST['logout'])) {
 </body>
 <html>
 <?php
-session_start();
 $passengerCount = $_SESSION['passengerCount']; 
 echo $passengerCount;
 require("../conn.php");
@@ -74,24 +73,73 @@ if (mysqli_num_rows($result) > 0) {
     }
  }
 }else if($passengerCount>1){
-
-    for ($i = 1; $i < $passengerCount; $i++) {
-        echo "<h2>Vui lòng nhập thông tin:</h2>";
-        ?>
-        <label> PASSPORT</label> <input type="text" name="passport[]">
-        <label> Họ </label> <input type="text" name="ho[]">
-        <label> tên lót </label> <input type="text" name="tenlot[]">
-        <label> tên </label> <input type="text" name="ten[]">
-        <label>SĐT:</label><input type="text" name="PHONE[]">
-        <label>Địa chỉ:</label><input type="text" name="address[]">
-        <label>Tuổi:</label><input type="text" name="age[]">
-        <label>giới tính:</label><input type="text" name="sex[]">
-        <br><br>
-        <?php
-    }
     ?>
-    <input type="submit" value="Tiếp tục" name="submit">
+    <form action="" method = "POST">
+    <?php
+   for ($i = 0; $i < ($passengerCount-1); $i++) {
+       echo "<h2>Vui lòng nhập thông tin:</h2>";
+       ?>
+       <label> PASSPORT</label> <input type="text" name="passport[]">
+       <label> Họ </label> <input type="text" name="ho[]">
+       <label> tên lót </label> <input type="text" name="tenlot[]">
+       <label> tên </label> <input type="text" name="ten[]">
+       <label>SĐT:</label><input type="text" name="PHONE[]">
+       <label>Địa chỉ:</label><input type="text" name="address[]">
+       <label>Tuổi:</label><input type="text" name="age[]">
+       <label>giới tính:</label><input type="text" name="sex[]">
+       <br><br>
+       <?php
+   }
+}
+   ?>
+   <input type="submit" value="Tiếp tục" name="submit">
 </form>
+<?php
+if (isset($_POST['submit'])) {
+   $found = 0;
+   $passengerCount = count($_POST['passport']);
+
+   // Lặp qua từng form để lưu thông tin hành khách
+   for ($i = 0; $i < $passengerCount; $i++) {
+   echo $passengerCount;
+       $passport = $_POST["passport"][$i];
+       $ho = $_POST["ho"][$i];
+           $tenlot = $_POST["tenlot"][$i];
+           $ten = $_POST["ten"][$i];
+           $SĐT = $_POST["PHONE"][$i];
+           $gioitinh = $_POST["sex"][$i];
+           $tuoi = $_POST["age"][$i];
+           $diachi = $_POST["address"][$i];
+           $SĐTBigInt = (int)$SĐT;
+           $tuoiInt = (int)$tuoi;
+           $sql = "INSERT INTO passenger_infor (`PASSPORTNO`, `FNAME`, `MNAME`, `LNAME`, `ADDRESS`, `PHONE`, `AGE`, `SEX`,`USERNAME`) VALUES('$passport', '$ho', '$tenlot', '$ten','$diachi','$SĐTBigInt','$tuoiInt', '$gioitinh','NULL')";
+           $result = mysqli_query($conn, $sql);
+           $found = 1;
+           echo $i;
+           echo $sql;
+           
+       // Kiểm tra xem có bản ghi nào được trả về hay không
+       $sql = "SELECT * FROM passenger_infor WHERE USERNAME = '{$_SESSION['username']}'";
+       $result = mysqli_query($conn, $sql);
+       if (mysqli_num_rows($result) > 0) {
+        // Duyệt qua từng bản ghi và hiển thị thông tin
+            while ($row = mysqli_fetch_assoc($result)) {
+                echo '<input type="hidden" name="passport" value="' . $row["PASSPORTNO"] . '">';
+                $_SESSION['passport']=$row["PASSPORTNO"] ;
+            }
+        }
+    }
+
+   if ($result == 1 || $found == 0) {
+       $_SESSION['passport'] = $passport;
+       header("Location: loaive.php"); // Điều hướng đến trang loaive.php
+    }
+  }
+ else {
+    echo "Không có góp ý nào.";
+}
+
+?>
 <?php
 if (isset($_POST['submit'])) {
     $found = 0;
@@ -102,15 +150,8 @@ if (isset($_POST['submit'])) {
         $passport = $_POST["passport"][$i];
 
         // Kiểm tra xem thông tin hành khách đã tồn tại trong cơ sở dữ liệu chưa
-        $sql = "SELECT * FROM passenger_infor WHERE USERNAME = '{$_SESSION['username']}'";
-        $result = mysqli_query($conn, $sql);
-        // Kiểm tra xem có bản ghi nào được trả về hay không
-        if (mysqli_num_rows($result) > 0) {
-            // Duyệt qua từng bản ghi và hiển thị thông tin
-        while ($row = mysqli_fetch_assoc($result)) {
-        echo '<input type="hidden" name="passport" value="' . $row["PASSPORTNO"] . '">';
-        $_SESSION['passport']=$row["PASSPORTNO"] ;
-        if (!mysqli_num_rows(checkthongtin($conn, $passport))){
+
+        if (!mysqli_num_rows(checkthongtin($conn, $passport))) {
             $ho = $_POST["ho"][$i];
             $tenlot = $_POST["tenlot"][$i];
             $ten = $_POST["ten"][$i];
@@ -131,9 +172,43 @@ if (isset($_POST['submit'])) {
         header("Location: loaive.php"); // Điều hướng đến trang loaive.php
 
     }
-  }
-}   
- else {
-    echo "Không có góp ý nào.";
 }
 ?>
+
+</body>
+</html>
+<style>
+    body{
+        background-image: url("../img/rst(2).webp");
+        background-size:100%;
+    }
+    form {
+        width: 400px;
+        margin: 0 auto;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    input[type="text"] {
+        width: 100%;
+        padding: 5px;
+        margin-bottom: 10px;
+    }
+
+    input[type="submit"] {
+        background-color: #00BFFF;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+        background-color:red;
+    }
+    
+    
+</style>

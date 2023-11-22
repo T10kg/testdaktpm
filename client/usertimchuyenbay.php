@@ -143,7 +143,8 @@ $cityy = cityname($conn);
     
     }
     .ttt{
-        border:solid;
+    border: 1px solid #ccc;
+    border-radius: 10px;
     }
     .t{
         margin-top: 33%;
@@ -154,7 +155,8 @@ $cityy = cityname($conn);
     margin-left:30px;
     }
     .tcb {
-    border:solid;
+        border: 1px solid #ccc;
+    border-radius: 10px;
     width: 450px;
     margin-top: 50px;
     padding: 10px;

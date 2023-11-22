@@ -130,4 +130,12 @@ Theo chính sách mới nhất từ hãng hàng không Bamboo Airways, việc đ
         width: 900px;
         text-align: left;
     }
+    input[type="submit"] {
+    padding: 10px 20px;
+    border-radius: 3px;
+    background-color: #00BFFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    }
 </style>

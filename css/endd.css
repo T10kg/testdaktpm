@@ -10,28 +10,27 @@ h2{
     color:black;
 }
 .hello{
-    color: white;
+    color:black;
     width: 400px;
 }
 .textt{ 
     list-style: none;
-    color: white;
+    color: black;
     font-size: 1.25em;
-    border: solid 2px gray;
-    text-align: center;
+    text-align: left;
     margin-bottom: 20px;
     width: 200px;
 }
 .imgg{
-    align-items: center;
+    align-items: middle;
     justify-content: space-between;
     margin-left: 10px;
     width: 330px;
 }
-img{
-
-    background-color: white;
+.img1{
+    margin-bottom: 20px;
 }
+
 a{
     text-decoration: none;
     color: black;

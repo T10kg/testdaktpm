@@ -16,6 +16,7 @@ if (isset($_POST['logout'])) {
     header("Location:../index.php"); // Điều hướng về trang đăng nhập
     exit();
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -130,3 +131,13 @@ if (isset($_POST['logout'])) {
 <div >
         <?php require("userend.php") ?>
             </div>
+<style>
+            input[type="submit"] {
+    padding: 10px 20px;
+    border-radius: 3px;
+    background-color: #00BFFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    }
+</style>

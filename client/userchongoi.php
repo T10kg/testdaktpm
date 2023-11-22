@@ -13,6 +13,7 @@ if(isset($_POST['submit']))
 
       $res = them_cho($conn,$s, $_SESSION['TICKET_NUMBER'][$i]);
       $i++;
+      header("Location: userthanhtoan.php");
       
     }
    
@@ -22,6 +23,7 @@ if(isset($_POST['submit']))
          $temp[$c['SEAT']] = 0;
       }
 }
+$seatClass = $_SESSION['class'];
 ?>
 
 
@@ -35,8 +37,12 @@ if(isset($_POST['submit']))
 
    <title>Document</title>
 </head>
+<body>
 <div>
 <form action="" method = "POST">
+<?php
+if ($seatClass == "FIRST-CLASS"){
+?>
 <table  class="seat-layout">
       <?php
       
@@ -49,7 +55,6 @@ if(isset($_POST['submit']))
      $ress= da_dat($conn);
      $tempp[] = 0;
             while($c = mysqli_fetch_array($ress)){
-               echo $c['SEAT'];
                $tempp[trim($c['SEAT'])] = 0;
          }
 
@@ -64,7 +69,7 @@ if(isset($_POST['submit']))
       ?>
          <tr>
       <?php
-         for($j = 1; $j <= 15; $j++){
+         for($j = 1; $j <= 3; $j++){
             
             ?>
                <th>
@@ -84,11 +89,118 @@ if(isset($_POST['submit']))
    </table>
    <input type="submit" value="Lưu" name = "submit">
    </form>
-</div>
-<body>
-   <div class="bannnner">
-     Sơ đồ chuyến bay
+   <?php
+}
+?>
+<?php
+if ($seatClass == "BUSINESS"){
+?>
+<table  class="seat-layout">
+      <?php
+      
+      $passengerCount = $_SESSION['passengerCount'];
+      ?>
+
+      <input type="hidden" id = "passenger_count" value = "<?php  echo  $passengerCount;?>">
+      <?php
+     $aa = "";
+     $ress= da_dat($conn);
+     $tempp[] = 0;
+            while($c = mysqli_fetch_array($ress)){
+               $tempp[trim($c['SEAT'])] = 0;
+         }
+
+      for($i = 0; $i <= 5; $i++){
+         if($i == 0) $aa = "A";
+         else if($i == 1) $aa = "B";
+         else if($i == 2) $aa = "C";
+         else if($i == 3) $aa = "D";
+         else if($i == 4) $aa = "E";
+         else if($i == 5) $aa = "F";
+
+      ?>
+         <tr>
+      <?php
+         for($j = 4; $j <= 7; $j++){
+            
+            ?>
+               <th>
+               <label for="<?php echo $aa.$j; ?>"><?php echo $aa.$j; ?></label>
+            <?php
+               if(isset($tempp[$aa.$j])) continue;
+            ?>
+    <input type="checkbox" onchange="handleCheckboxChange(this)" name="seat[]" id="<?php echo $aa.$j; ?>" value="<?php echo $aa.$j;?>">
+</th>
+            <?php
+         }
+         ?>
+         </tr>
+         <?php
+      }
+      ?>
+   </table>
+   <input type="submit" value="Lưu" name = "submit">
+   </form>
+   <?php
+}
+?>
+<?php
+if ($seatClass == "ECONOMY"){
+?>
+<table  class="seat-layout">
+      <?php
+      
+      $passengerCount = $_SESSION['passengerCount'];
+      ?>
+
+      <input type="hidden" id = "passenger_count" value = "<?php  echo  $passengerCount;?>">
+      <?php
+     $aa = "";
+     $ress= da_dat($conn);
+     $tempp[] = 0;
+            while($c = mysqli_fetch_array($ress)){
+               $tempp[trim($c['SEAT'])] = 0;
+         }
+
+      for($i = 0; $i <= 5; $i++){
+         if($i == 0) $aa = "A";
+         else if($i == 1) $aa = "B";
+         else if($i == 2) $aa = "C";
+         else if($i == 3) $aa = "D";
+         else if($i == 4) $aa = "E";
+         else if($i == 5) $aa = "F";
+
+      ?>
+         <tr>
+      <?php
+         for($j = 8; $j <= 15; $j++){
+            
+            ?>
+               <th>
+               <label for="<?php echo $aa.$j; ?>"><?php echo $aa.$j; ?></label>
+            <?php
+               if(isset($tempp[$aa.$j])) continue;
+            ?>
+    <input type="checkbox" onchange="handleCheckboxChange(this)" name="seat[]" id="<?php echo $aa.$j; ?>" value="<?php echo $aa.$j;?>">
+</th>
+            <?php
+         }
+         ?>
+         </tr>
+         <?php
+      }
+      ?>
+   </table>
+   <input type="submit" value="Lưu" name = "submit">
+   </form>
+   <div class="chongoi">
+      Sơ đồ chỗ ngồi
    </div>
+   <?php
+}
+?>
+</div>
+
 </body>
 <script>
    var i = 0;
@@ -121,8 +233,16 @@ if(isset($_POST['submit']))
 </script>
 </html>
 <style>
+   .chongoi{
+      width: 100%;
+      height:300px;
+        background: url(../img/seattt.jpg) center/cover ;
+        background-repeat: no-repeat;
+        background-size: 70% 300px;
+}
 body {
   font-family: Arial, sans-serif;
+  background-image: url("../img/sf.jpg");
 }
 
 .seat-layout {
@@ -164,12 +284,5 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
   background-color: #45a049;
-}
-.bannnner{
-      width: 100%;
-      height:300px;
-        background: url(../img/seattt.jpg) center/cover ;
-        background-repeat: no-repeat;
-        background-size: 70% 300px;
 }
 </style>

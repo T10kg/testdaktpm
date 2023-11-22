@@ -122,7 +122,14 @@ if (isset($_POST['logout'])) {
         font-size: 1.5em;
     margin-right: 100px;
 }
-
+input[type="submit"] {
+    padding: 10px 20px;
+    border-radius: 3px;
+    background-color: #00BFFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    }
 
 
 </style>

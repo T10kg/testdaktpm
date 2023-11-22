@@ -21,7 +21,6 @@
                         <a href="no_login/callme.php"><li>Liên hệ chúng tôi</li></a>
                         <a href="no_login/colab.php"><li>Hợp tác chúng tôi</li></a>
                         <a href="no_login/cachdatve.php"><li>Cách đặt vé</li></a>
-                        <a href="no_login/khuyenmai.php"><li>Cách đặt vé</li></a>
                         <a href="no_login/trogiup.php"><li> Trợ giúp</li></a>
                 </ul>
          </div>

@@ -62,7 +62,7 @@ if (isset($_POST['logout'])) {
     <div><a href="usernew6.php">Cách yêu cầu xuất hóa đơn GTGT khi đặt vé máy bay tại Việt Nam </a></div>
     <div><a href="usernew7.php">Xác nhận và xác thực thanh toán </a></div>
     <div><a href="usernew8.php">Làm cách nào để kiểm tra trạng thái hoàn tiền của tôi</a></div>
-    <div><a href="usernew9.php">Lời hứa hoàn lại tiền trên Traveloka </a></div>
+    <div><a href="usernew.php">Lời hứa hoàn lại tiền trên Traveloka </a></div>
 </div>
 <style>
 body{
@@ -96,5 +96,12 @@ body{
     margin-bottom: 20px;
     border-bottom: 1px solid gray;
 }
-
+input[type="submit"] {
+    padding: 10px 20px;
+    border-radius: 3px;
+    background-color: #00BFFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    }
 </style>

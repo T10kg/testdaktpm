@@ -53,6 +53,11 @@ if (isset($_POST['logout'])) {
 </div>
 </body>
 <html>
+ <div class="search">
+    <div class="imgr">
+        <img src="../img/left.png" width="250"px>
+    </div>
+    <div class="air">
 <h2>Tìm kiếm thông tin chuyến bay</h2>
 <form method="post">
     <label for="searchTerm"> số hộ chiếu:</label>
@@ -95,11 +100,27 @@ if (isset($_POST['submit'])) {
 }
 
 ?>
+</div>
+<div class="imgl">
+        <img src="../img/right.png" width="250"px>
+    </div>
+</div>
 <style>
-  body{
-        background-image: url("../img/map.jpg");
-        background-size:100%;
-    }
+.search{
+    display:flex;
+    width: 100%; 
+    justify-content: space-between;
+}
+.imgr{
+    margin-top:3%;
+    position: sticky;
+    display: block;
+}
+.imgl{
+    margin-top:3%;
+    position: sticky;
+    display: block;
+}
     .thongtin {
     background-image: url("../img/ve.jpg");
     background-size:100%;
