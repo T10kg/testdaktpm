@@ -43,6 +43,12 @@ if ($seatClass == "FIRST-CLASS"){
 ?>
 <table  class="seat-layout">
       <?php
+      
+      $passengerCount = $_SESSION['passengerCount'];
+      ?>
+
+      <input type="hidden" id = "passenger_count" value = "<?php  echo  $passengerCount;?>">
+      <?php
      $aa = "";
      $ress= da_dat($conn);
      $tempp[] = 0;
@@ -92,6 +98,12 @@ if ($seatClass == "BUSINESS"){
 ?>
 <table  class="seat-layout">
       <?php
+      
+      $passengerCount = $_SESSION['passengerCount'];
+      ?>
+
+      <input type="hidden" id = "passenger_count" value = "<?php  echo  $passengerCount;?>">
+      <?php
      $aa = "";
      $ress= da_dat($conn);
      $tempp[] = 0;
@@ -136,6 +148,12 @@ if ($seatClass == "BUSINESS"){
 if ($seatClass == "ECONOMY"){
 ?>
 <table  class="seat-layout">
+      <?php
+      
+      $passengerCount = $_SESSION['passengerCount'];
+      ?>
+
+      <input type="hidden" id = "passenger_count" value = "<?php  echo  $passengerCount;?>">
       <?php
      $aa = "";
      $ress= da_dat($conn);
@@ -188,10 +206,11 @@ if ($seatClass == "ECONOMY"){
    var i = 0;
   function handleCheckboxChange(checkbox) {
    var nodeList = document.querySelectorAll("input[type='checkbox']");
+   var convert = document.getElementById("passenger_count");
    var array = [...nodeList];
       if (checkbox.checked) {
          i++;
-         if(i == 1){
+         if(i == convert.value){
             array.forEach(function(element) {
                if(element.checked) {
                }
