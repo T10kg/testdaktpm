@@ -10,20 +10,23 @@ if(isset($_POST['submit']))
    $seats = $_POST['seat'];
    $i = 1;
    foreach ($seats as $s) {
-      $res = them_cho($conn,$s, $_SESSION['TICKET_NUMBER'][$i]);
+
+      $res = them_cho($conn,$s, $_SESSION['TICKET_NUMBER']);
       $i++;
-               header("Location: ../index.php");
+      header("Location: userthanhtoan.php");
+      
     }
    
       $temp[] = "";
       $res= da_dat($conn);
       while($c = mysqli_fetch_array($res)){
          $temp[$c['SEAT']] = 0;
-
       }
 }
 $seatClass = $_SESSION['class'];
+$ticket_number = $_SESSION['TICKET_NUMBER'];
 ?>
+
 
 
 <!DOCTYPE html>
@@ -36,6 +39,7 @@ $seatClass = $_SESSION['class'];
 
    <title>Document</title>
 </head>
+<body>
 <div>
 <form action="" method = "POST">
 <?php
@@ -81,9 +85,6 @@ if ($seatClass == "FIRST-CLASS"){
    </table>
    <input type="submit" value="Lưu" name = "submit">
    </form>
-   <div class="chongoi">
-      Sơ đồ chỗ ngồi
-   </div>
    <?php
 }
 ?>
@@ -209,18 +210,17 @@ if ($seatClass == "ECONOMY"){
       
     }
     console.log(i);
-}
    
-
+}
 </script>
 </html>
 <style>
    .chongoi{
-   width: 100%;
-   height:300px;
-      background: url(../img/seattt.jpg) center/cover ;
-      background-repeat: no-repeat;
-      background-size: 70% 300px;
+      width: 100%;
+      height:300px;
+        background: url(../img/seattt.jpg) center/cover ;
+        background-repeat: no-repeat;
+        background-size: 70% 300px;
 }
 body {
   font-family: Arial, sans-serif;
@@ -267,5 +267,4 @@ input[type="submit"] {
 input[type="submit"]:hover {
   background-color: #45a049;
 }
-
 </style>

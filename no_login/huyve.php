@@ -32,8 +32,10 @@ if (isset($_POST['huy'])) {
         $deleteStmt->bind_param("s", $ticketNumber);
         $deleteStmt->execute();
 
-        echo "Vé đã được hủy thành công.";
-        header("refresh:1; url=chocuatoi.php");
+        echo "<script>
+                alert('Hủy vé thành công'); 
+                window.location.href='chocuatoi.php';
+                </script>";
     }
 }
 ?>

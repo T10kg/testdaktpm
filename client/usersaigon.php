@@ -5,7 +5,7 @@
   <img src="../img/sanbay.jpg" alt="a forest">
 </div>
 <style>
-    .gallery {
+     .gallery {
   --g: 8px;   /* the gap */
   --s: 400px; /* the size */
   
@@ -17,11 +17,8 @@
   width: 350px;
   aspect-ratio: 1;
   object-fit: cover;
-  border-radius: 50%;
-  transform: translate(var(--_x,0),var(--_y,0));
+  border-radius: 20px;
   cursor: pointer;
-  z-index: 0;
-  transition: .3s, z-index 0s .3s;
 }
 .gallery img:hover {
   --_i: 1;
@@ -53,7 +50,7 @@
   min-height: 65vh;
   display: grid;
   place-content: center;
-  background: white;
+
   margin: 20px;
 }
 

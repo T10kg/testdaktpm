@@ -1,13 +1,27 @@
 <?php
 session_start();
-
+require("../conn.php");
 // Kiểm tra xem người dùng đã đăng nhập hay chưa
 if (!isset($_SESSION['username'])) {
-    header("Location:login.php"); // Điều hướng về trang đăng nhập nếu chưa đăng nhập
+    header("Location: login.php"); // Điều hướng về trang đăng nhập nếu chưa đăng nhập
     exit();
 }
 
 $username = $_SESSION['username'];
+
+
+// Truy vấn để lấy thông tin passport
+$sql = "SELECT PASSPORTNO FROM passenger_infor WHERE USERNAME = '$username'";
+$result = mysqli_query($conn, $sql);
+
+// Kiểm tra kết quả truy vấn
+if (mysqli_num_rows($result) > 0) {
+    // Lấy thông tin passport từ kết quả truy vấn
+    $row = mysqli_fetch_assoc($result);
+    $passport = $row['PASSPORTNO'];
+    $_SESSION['passport']=$passport;
+}
+
 
 // Khi người dùng nhấp vào nút "Thoát"
 if (isset($_POST['logout'])) {
@@ -42,7 +56,7 @@ if (isset($_POST['logout'])) {
                 <a href="usertimchuyenbay.php">Tìm chuyến bay </a>
         </div>
         <div class="sp">
-                <a href="userchocuatoi.php">Đặt chỗ của tôi</a>
+                <a href="userdatcho.php">Đặt chỗ của tôi</a>
         </div>
         <div class="sp">
             <form class="form" method="post" action="">
@@ -53,83 +67,82 @@ if (isset($_POST['logout'])) {
 </div>
 </body>
 <html>
-<div class="colab">
-    <p><h1>Hợp tác với các hãng hàng không hàng đầu Việt Nam</h1></p>
-    Với tiêu chí tạo ra một plasform đem lại sự tin tưởng, an toàn và tiết kiệm đến với người dùng.</br>
-    <h5>Luôn chọn các dịch vụ tốt nhất để đưa đến người tiêu dùng</h5>
-</div>
-<h3>Bắt đầu sử dụng trong 2 bước đơn giản</h3>
-<div class="start">
-    <div>
-        <img src="../img/search.webp" width="150px">
-        <h5>Truy cập vào trang wearefly.com </h5>
-    </div>
-    <div>
-        <img src="../img/taotaikhoan.webp" width="150px">
-        <h5>Sau đó chọn mục tạo tài khoản</h5>
-    </div>
-    <div>
-        <img src="../img/start.webp" width="150px">
-        <h5>Sau khi tao tài khoảng bắt đầu trải nghiệm những dịch vụ của chúng tôi</h5>
-    </div>
-</div>
+<?php
+
+if (isset($_POST['chinhsua'])) {
+    $ticketNumber = $_POST["ticketNumber"];
+}
+?>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Thay đổi hạng vé</title>
+</head>
+<body>
+    <h1>Thay đổi hạng vé</h1>
+    <form method="post" action="">
+        <label>Hạng vé mới:</label>
+        <select name="class">
+            <option value="ECONOMY">ECONOMY</option>
+            <option value="BUSINESS">BUSINESS</option>
+            <option value="FIRST-CLASS">FIRST-CLASS</option>
+        </select>
+        <input type="hidden" name="ticketNumber" value="<?php echo $ticketNumber; ?>">
+        <input type="submit" name="chinhsuaa" value="Chỉnh sửa">
+    </form>
+<?php
+if (isset($_POST['chinhsuaa'])) {
+    $class = $_POST["class"];
+    $_SESSION['class'] = $class;
+    echo $_SESSION['class'];
+    $ticketNumber = $_POST["ticketNumber"];
+    $_SESSION['TICKET_NUMBER']=$ticketNumber;
+    echo $_SESSION['TICKET_NUMBER'];
+    $sql = "UPDATE `ticket` SET `CLASS`='$class' WHERE `TICKET_NUMBER` = '$ticketNumber'";
+    mysqli_query($conn, $sql);
+    header("Location: userchongoib.php");
+    exit;
+}
+?>
 <style>
     body{
-        background-color: #caf0f8;
+        background-image: url("../img/rst(2).webp");
         background-size:100%;
     }
-    .colab {
-        margin-right:30%;
-        text-align: left;
-        margin-bottom: 20px;
-    }
-
-    .colab h1 {
-        font-size: 1.5em;
-        color: black;
-        margin-bottom: 10px;
-    }
-
-    .colab h5 {
-        font-size: 1.5em;
-        color: black;
-        margin-bottom: 20px;
-    }
-
-
-    div {
-        font-size: 16px;
-        color: black;
-    }
-        .start {
-        margin-right: 30%;
-        width:150px;
-        display: flex;
-        text-align: left;
-        margin-bottom: 20px;
-    }
-
-    h3 { 
-        font-size: 1.5em;
-        margin-right: 38%;
-        text-align:left;
-        color: black;
-        margin-bottom: 10px;
-        border-bottom: 1px dashed #333;
-        padding-bottom: 5px;
-    }
-    .start div {
-        font-size: 1.5em;
-    margin-right: 100px;
+.ve{
+    margin-right:50%;
 }
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+select,
+input[type="date"],
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
 input[type="submit"] {
     padding: 10px 20px;
-    border-radius: 3px;
-    background-color: #00BFFF;
-    color: #fff;
+    background-color: #3487FF;
+    color: white;
     border: none;
+    border-radius: 4px;
     cursor: pointer;
-    }
+}
 
-
+input[type="submit"]:hover {
+    background-color: red;
+}
 </style>
+

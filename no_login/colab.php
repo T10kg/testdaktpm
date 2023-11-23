@@ -58,7 +58,7 @@
 </div>
 <style>
     body{
-        background-image: url("../img/map.jpg");
+        background-color: #caf0f8;
         background-size:100%;
     }
     .colab {

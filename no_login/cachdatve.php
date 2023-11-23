@@ -38,23 +38,23 @@
 <div class="parent">
 
     <div class="box1">
-        <b>1</b><strong>Tìm chuyến bay</strong></br>
+        <b>1:</b><strong>Tìm chuyến bay</strong></br>
         Bắt đầu bằng việc điền các thông tin tìm kiếm.
     </div>
     <div class="box2">
-        <b>2</b><strong>Chọn chuyến bay và đặt vé</strong></br>
+        <b>2:</b><strong>Chọn chuyến bay và đặt vé</strong></br>
         Thông tin chuyến bay (hãng bay, lịch bay, giá vé, v.v.) đều được hiển thị trên trang kết quả tìm kiếm.
     </div>
     <div class="box3">
-        <b>3</b><strong>Điền thông tin liên lạc và thông tin hành khách</strong></br>
+        <b>3:</b><strong>Điền thông tin liên lạc và thông tin hành khách</strong></br>
         Sau khi đã chọn đúng chuyến bay, bạn cần điền thông tin người đặt vé và thông tin hành khách.
     </div>
     <div class="box4">
-        <b>4</b><strong>Tiến hành thanh toán</strong></br>
+        <b>4:</b><strong>Tiến hành thanh toán</strong></br>
         Có nhiều phương thức thanh toán khả dụng. Hãy chọn phương thức bạn mong muốn.
     </div>
     <div class="box5">
-        <b>5</b><strong>Nhận vé điện tử</strong></br>
+        <b>5:</b><strong>Nhận vé điện tử</strong></br>
         Chúng tôi sẽ gửi vé điện tử vào email của bạn trong vòng 60 phút sau khi nhận được số tiền thanh toán.
     </div>
 </div>
@@ -64,7 +64,7 @@
 <style>
     body {
         
-        background-image: url("../img/map.jpg");
+        background-color: #caf0f8;
         background-size:100%;
     }
 </style>

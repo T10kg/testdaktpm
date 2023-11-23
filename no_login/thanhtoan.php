@@ -42,6 +42,7 @@
 <html>
 <body>
     <h1>Chọn phương thức thanh toán</h1>
+    <div class ="thanhtoan">
     <form method="post">
         <input type="submit" name="online_payment" value="Thanh toán trực tuyến">
         <input type="submit" name="in_store_payment" value="Thanh toán trực tiếp">
@@ -91,8 +92,7 @@ if (isset($_POST['confirm_store'])) {
 
     // Hiển thị thông báo cửa hàng đã chọn
     echo '<form method="post" action="thongtinve.php">';
-    echo "<h2>Cửa hàng thanh toán đã chọn</h2>";
-    echo "<p>Bạn đã chọn cửa hàng: $selectedStore</p>";
+    echo "<h2>Bạn đã chọn cửa hàng: $selectedStore</h2>";
     echo "<button>Xác nhận thanh toán</button>";
     echo '</form>';
 }
@@ -102,18 +102,14 @@ if (isset($_POST['confirm_store1'])) {
 
     // Hiển thị thông báo cửa hàng đã chọn
     echo '<form method="post" action="thongtinve.php">';
-    echo "<h2>Cửa hàng thanh toán đã chọn</h2>";
-    echo "<p>Bạn đã chọn cửa hàng: $selectedStore</p>";
+    echo "<h2>Bạn đã chọn cửa hàng: $selectedStore</h2>";
     echo "<button>Xác nhận thanh toán</button>";
     echo '</form>';
 }
 ?>
-
+</div>
 <style>
-    body{
-        background-image: url("../img/map.jpg");
-        background-size:100%;
-    }
+
     h1 {
     text-align: center;
 }
@@ -126,7 +122,7 @@ form {
 
 input[type="submit"],
 button {
-    padding: 10px 20px;
+    padding: 5px 10px;
     background-color: #3487FF;
     color: white;
     border: none;
@@ -145,6 +141,16 @@ img {
     margin: 0 auto;
     margin-top: 20px;
     max-width: 300px;
+}
+.thanhtoan > h2{
+    text-align:center;
+}
+.thanhtoan{
+    background-color: rgb(225,225,225,0.5);
+    border-radius:20px;
+}
+.thanhtoan p{
+    text-align:center;
 }
 </style>
 

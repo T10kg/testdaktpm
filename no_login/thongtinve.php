@@ -35,11 +35,11 @@
 </div>
 </body>
 <html>
-<div class="thongtin">
 <?php
 require("../conn.php");
 require("../client/func.php");
 session_start();
+
 $sql = "SELECT * FROM ticket WHERE PASSPORTNO = '{$_SESSION['passport']}'";
 $result = mysqli_query($conn, $sql);
 
@@ -47,37 +47,48 @@ $result = mysqli_query($conn, $sql);
 if (mysqli_num_rows($result) > 0) {
     // Duyệt qua từng bản ghi và hiển thị thông tin
     while ($row = mysqli_fetch_assoc($result)) {
-        echo "ngày mua: " . $row["DATE_OF_BOOKING"] . "<br>";
-        echo "ngày đi: " . $row["DATE_OF_TRAVEL"] . "<br>";
-        echo "Hạng: " . $row["CLASS"] . "<br>";
-        echo "Ngày hủy: " . $row["DATE_OF_CANCELLATION"] . "<br>";
-        echo "Mã chuyến bay: " . $row["FLIGHT_CODE"] . "<br>";
-        echo "Mã vé:" . $row["TICKET_NUMBER"] . "<br><br>";
+        echo '<div class="thongtin">';
+        echo '<p>Ngày mua: ' . $row["DATE_OF_BOOKING"] . '</p>';
+        echo '<p>Ngày đi: ' . $row["DATE_OF_TRAVEL"] . '</p>';
+        echo '<p>Hạng: ' . $row["CLASS"] . '</p>';
+        echo '<p>Ghế ngồi: ' . $row["SEAT"] . '</p>';
+        echo '<p>Mã chuyến bay: ' . $row["FLIGHT_CODE"] . '</p>';
+        echo '<p>Mã vé: ' . $row["TICKET_NUMBER"] . '</p>';
+        echo '</div>';
     }
 } else {
     echo "Không có góp ý nào.";
 }
 ?>
-</div>
 <style>
     body{
         background-image: url("../img/map.jpg");
         background-size:100%;
     }
     .thongtin {
-    width: 500px;
+    background-image: url("../img/ve.jpg");
+    background-size:100%;
+    width: 700px;
     margin-top:50px;
     padding: 20px;
     background-color: #f2f2f2;
     border: 1px solid #ccc;
-    border-radius: 20px;
+    border-radius: 4px;
+    height:300px;
 }
 
-.thongtin p {
-    margin-bottom: 10px;
-}
 
 .thongtin p:last-child {
     margin-bottom: 0;
 }
-</style>
+.thongtin {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Chia thành 2 cột bằng nhau */
+    grid-gap: 10px; /* Khoảng cách giữa các cột */
+}
+
+.thongtin p {
+    text-decoration: underline;
+    font-size: 1.5em;
+    margin: 38px; /* Loại bỏ khoảng trống giữa các dòng trong mỗi cột */
+}

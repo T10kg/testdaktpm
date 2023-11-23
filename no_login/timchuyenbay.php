@@ -140,7 +140,8 @@ $cityy = cityname($conn);
     margin-left:30px;
     }
     .tcb {
-    border:solid;
+    border:solid 1px gray;
+    border-radius:10px;
     width: 450px;
     margin-top: 50px;
     padding: 10px;

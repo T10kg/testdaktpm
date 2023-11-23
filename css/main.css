@@ -1,6 +1,8 @@
 .main {
+	border-radius: 20px;
+	background-color: rgb(225,225,225,0.5);
 	border-top: solid silver 0.5px ;
-	width: 1200px;
+	width: 1000px;
 	margin: 10px;
 	padding: 0;
 }
@@ -22,7 +24,8 @@ h1 {
 }
 
 .container {
-	padding-left: 13%;
+	background-color: rgb(225,225,225,0.4);
+	margin-left: 5%;
 	display: flex;
 	width: 900px;
 }

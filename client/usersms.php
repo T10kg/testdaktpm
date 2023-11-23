@@ -77,18 +77,18 @@ if (mysqli_num_rows($result) > 0) {
 ?>
 <style>
       body{
-        background-image: url("../img/map.jpg");
+        background-color: #caf0f8;
         background-size:100%;
     }
     .thongtin {
     background-image: url("../img/sf.jpg");
     background-size:100%;
-    width: 700px;
+    width: 600px;
     margin-top:20px;
     background-color: #f2f2f2;
     border: 1px solid #ccc;
     border-radius: 10px;
-    height:300px;
+    height:250px;
 }
 
 

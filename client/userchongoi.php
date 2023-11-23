@@ -27,6 +27,7 @@ $seatClass = $_SESSION['class'];
 ?>
 
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -59,12 +60,12 @@ if ($seatClass == "FIRST-CLASS"){
          }
 
       for($i = 0; $i <= 5; $i++){
-         if($i == 0) $aa = "A";
-         else if($i == 1) $aa = "B";
-         else if($i == 2) $aa = "C";
-         else if($i == 3) $aa = "D";
-         else if($i == 4) $aa = "E";
-         else if($i == 5) $aa = "F";
+         if($i == 0) $aa = "F";
+         else if($i == 1) $aa = "E";
+         else if($i == 2) $aa = "D";
+         else if($i == 3) $aa = "C";
+         else if($i == 4) $aa = "B";
+         else if($i == 5) $aa = "A";
 
       ?>
          <tr>
@@ -111,13 +112,12 @@ if ($seatClass == "BUSINESS"){
          }
 
       for($i = 0; $i <= 5; $i++){
-         if($i == 0) $aa = "A";
-         else if($i == 1) $aa = "B";
-         else if($i == 2) $aa = "C";
-         else if($i == 3) $aa = "D";
-         else if($i == 4) $aa = "E";
-         else if($i == 5) $aa = "F";
-
+         if($i == 0) $aa = "F";
+         else if($i == 1) $aa = "E";
+         else if($i == 2) $aa = "D";
+         else if($i == 3) $aa = "C";
+         else if($i == 4) $aa = "B";
+         else if($i == 5) $aa = "A";
       ?>
          <tr>
       <?php
@@ -163,12 +163,12 @@ if ($seatClass == "ECONOMY"){
          }
 
       for($i = 0; $i <= 5; $i++){
-         if($i == 0) $aa = "A";
-         else if($i == 1) $aa = "B";
-         else if($i == 2) $aa = "C";
-         else if($i == 3) $aa = "D";
-         else if($i == 4) $aa = "E";
-         else if($i == 5) $aa = "F";
+         if($i == 0) $aa = "F";
+         else if($i == 1) $aa = "E";
+         else if($i == 2) $aa = "D";
+         else if($i == 3) $aa = "C";
+         else if($i == 4) $aa = "B";
+         else if($i == 5) $aa = "A";
 
       ?>
          <tr>

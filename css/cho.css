@@ -1,21 +1,17 @@
 .parent{
     width: 900px;
-}
-.parent div:nth-child(odd) {
-    margin: 20px;
-}
-
-.parent div:nth-child(even) {
-    margin: 20px;
+    margin-left: 40px;
 }
 .box1, .box3, .box5 {
     width: 300px;
     text-align: right;
-    padding-left: 55%;
+    margin-left: 55%;
+    background-color: rgb(225,225,225,0.5);
 }
 .box2, .box4 {
     width: 300px;
-    padding-right: 80%;
+   margin-right: 80%;
+    background-color: rgb(225,225,225,0.5);
 }
 h3{
     font-size: 1.5em;

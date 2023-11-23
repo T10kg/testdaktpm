@@ -12,8 +12,8 @@
 <body>
 <div class="banner">
     <div class="menuu">
-        <div class="chucnang"><i class="fa-solid fa-bars-staggered"> <a href="index.php">wearefly</a></i>
-                <ul class="dropdown-menu">
+        <div class="chucnang"><i class="fa-solid fa-bars-staggered" onclick="hello()"> <a href="index.php">wearefly</a></i>
+                <ul class="dropdown-menu" style = "transform: translate(-100%,0px);">
                         <a href="index.php"><li>Trang chủ</li></a>
                         <a href="no_login/chocuatoi.php"><li>Đặt chỗ của tôi</li></a>
                         <a href="no_login/sms.php"><li>Hộp thư của tôi</li></a>
@@ -85,10 +85,10 @@
                 <img src="img/VJ.png" width="200vw">
                 </div>
                 <div >
-                <img src="img/vna.png" width="200vw">
+                <img src="img/vna (2).png" width="200vw">
                 </div>
                 <div>
-                <img src="img/BB.jpg" width="250vw">
+                <img src="img/BB.png" width="250vw">
                 </div>
         </div>
 </div>
@@ -114,3 +114,18 @@
 <div >
         <?php require("no_login/end.php") ?>
             </div>
+
+<script>
+
+        function hello() {
+  var ele = document.querySelector(".dropdown-menu");
+  if (ele.style.transform == "translate(-100%, 0px)") {
+    ele.style.transform = "translate(0px, 0px)";
+    ele.style.transition = "all 0.6s ease-in-out";
+  } else {
+    ele.style.transform = "translate(-100%, 0px)";
+    ele.style.transition = "all 0.6s ease-in-out";
+  }
+}
+
+</script>

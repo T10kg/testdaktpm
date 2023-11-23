@@ -85,13 +85,17 @@ if (isset($_POST['submit'])) {
             echo '<p>Ngày mua: ' . $row["DATE_OF_BOOKING"] . '</p>';
             echo '<p>Ngày đi: ' . $row["DATE_OF_TRAVEL"] . '</p>';
             echo '<p>Hạng: ' . $row["CLASS"] . '</p>';
-            echo '<p>Ngày hủy: ' . $row["DATE_OF_CANCELLATION"] . '</p>';
+            echo '<p>Ghế ngồi: ' . $row["SEAT"] . '</p>';
             echo '<p>Mã chuyến bay: ' . $row["FLIGHT_CODE"] . '</p>';
             echo '<p>Mã vé: ' . $row["TICKET_NUMBER"] . '</p>';
             echo '</div>';
             echo '<form method="post" action="userhuyve.php">';
             echo '<input type="hidden" name="ticketNumber" value="' . $row["TICKET_NUMBER"] . '">';
             echo '<input type="submit" value="Hủy vé" name="huy">';
+            echo '</form>';
+            echo '<form method="post" action="userchinhsua.php">';
+            echo '<input type="hidden" name="ticketNumber" value="' . $row["TICKET_NUMBER"] . '">';
+            echo '<input type="submit" value="Chỉnh sửa" name="chinhsua">';
             echo '</form>';
         }
     } else {

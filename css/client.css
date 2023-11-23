@@ -1,4 +1,5 @@
 body {
+    background-color: #caf0f8;
     display: flex;
     flex-direction: column;
     justify-content: middle;
@@ -7,42 +8,50 @@ body {
     padding: 0;
 }
 .menuu {
+    background-color: rgb(225,225,225,0.5);
     font-family: Helvetica, sans-serif;
     position: sticky;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #f2f2f2;
-    width: 1200px;
+    width: 100%;
     z-index: 9999;
 }
 .banner{
-    background-image: url('../img/background\(1\).jpg');   
+    background:  url('../img/hello.png') center/cover ;
+    background-repeat: no-repeat;
+    background-size: 100% 600px;
     position: relative;
-    width: 1200px;
-    height: 250px;
+    width: 100%;
+    height: 600px;
 }
 
 .chucnang {
+    font-size: 1.25em;
     position: relative;
 }
 
 .dropdown-menu {
+    height: 500px;
+
     position: absolute;
     top: 100%;
     left: 0;
     opacity: 0; /* Ẩn dropdown menu mặc định */
     visibility: hidden;
     list-style: none;
-    background-color: #fff;
-    padding: 10px;
+    padding: 30px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: opacity 0.3s ease, visibility 0.3s ease; /* Thêm hiệu ứng transition */
 }
 
 .dropdown-menu li {
-    margin-bottom: 10px;
     width: 200px;
+    padding: 10px;
+    margin:15px;
+    border: solid 1px gray;
+    border-radius: 20px;
+    background-color: aquamarine;
 }
 
 .dropdown-menu a {
@@ -81,7 +90,6 @@ body {
 .menu {
     display: flex;
     justify-content: space-between;
-    background-color: #f2f2f2;
 
 }
 
@@ -90,6 +98,7 @@ body {
 }
 
 .sp a {
+    font-size: 1.25em;
     text-decoration: none;
     color: #333;
     padding: 5px;
@@ -97,29 +106,38 @@ body {
     margin-top: 20px;
 }
 .sp2 a{
+    font-size: 1.25em;
     display: block;
     margin-left:20px;
 }
 .sp2 a {
+    margin-right: 10px;
+    font-size: 1.25em;
     display: block;
     text-decoration: none;
     background-color: #3487FF;
     color: white;
     padding: 5px 10px;
     border-radius: 5px;
-    margin-top: 20px;
+    margin-top: 18px;
 }
 
 .sp2 a:hover {
     background-color: red;
 }
 .sp1 a{
+    font-size: 1.25em;
     display: block;
     text-decoration: none;
     color:gray;
     margin-top: 25px;
 }
 .sp p{
+    font-size: 1.25em;
     display: block;
     margin-top: 19px;
+}
+.like{
+    background-color: rgb(225,225,225,0.5);
+    border-radius: 20px;
 }
