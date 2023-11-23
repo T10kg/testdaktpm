@@ -85,7 +85,7 @@
                 <img src="img/VJ.png" width="200vw">
                 </div>
                 <div >
-                <img src="img/vna (2).png" width="200vw">
+                <img src="img/vna.png" width="200vw">
                 </div>
                 <div>
                 <img src="img/BB.png" width="250vw">
